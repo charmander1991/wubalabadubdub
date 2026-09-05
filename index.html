@@ -103,19 +103,20 @@
         </div>
 
         <!-- Right Side: Borderless Blended Emblem with Soft Glow -->
-        <div class="lg:col-span-5 flex justify-center items-center">
-          <div class="relative w-full max-w-sm flex items-center justify-center p-4">
-            <div class="absolute w-64 h-64 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
-            <img 
-              src="logo.png" 
-              alt="Your Dream Our Mission Logo" 
-              class="relative z-10 w-full max-w-[320px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105"
-            />
-          </div>
-        </div>
-
-      </div>
-    </section>
+        <!-- Right Side: Borderless Blended Emblem with Soft Glow -->
+<div class="lg:col-span-5 flex justify-center items-center">
+  <div class="relative w-full max-w-sm flex items-center justify-center p-4">
+    <div class="absolute w-64 h-64 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Wrapper clips off the line on the far right edge -->
+    <div class="overflow-hidden max-w-[290px] flex justify-center">
+      <img 
+        src="logo.png" 
+        alt="Your Dream Our Mission Logo" 
+        class="relative z-10 w-full max-w-[320px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105 -mr-4"
+      />
+    </div>
+  </div>
+</div>
 
     <!-- ==================== SERVICES SECTION ==================== -->
     <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
