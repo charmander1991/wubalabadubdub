@@ -8,13 +8,12 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Cinzel Decorative, Plus Jakarta Sans, and Playfair/cursive fallback for Moontime -->
+  <!-- Google Fonts: Cinzel Decorative, Plus Jakarta Sans, and Great Vibes (Moontime fallback) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* Local font definition for Moontime if installed, with Great Vibes fallback */
     @font-face {
       font-family: 'Moontime';
       src: local('Moontime'), local('Moon Time'), url('Moontime.otf') format('opentype'), url('Moontime.ttf') format('truetype');
@@ -56,7 +55,7 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-palette-champagne/95 backdrop-blur-md border-b border-palette-goldSoft/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-24 flex items-center justify-between">
       
-      <!-- Top-Left Nav Logo -->
+      <!-- Nav Logo -->
       <a href="#" class="flex items-center py-2">
         <img 
           src="logo.png" 
@@ -66,21 +65,22 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold text-palette-charcoalDark">
+      <nav class="hidden md:flex items-center space-x-7 text-xs uppercase tracking-widest font-semibold text-palette-charcoalDark">
         <a href="#services" data-i18n="nav-services" class="hover:text-palette-goldDark transition">Services</a>
+        <a href="#attorneys" data-i18n="nav-attorneys" class="hover:text-palette-goldDark transition">Attorneys</a>
         <a href="#location" data-i18n="nav-location" class="hover:text-palette-goldDark transition">Office & Map</a>
         <a href="#appointment" data-i18n="nav-cta" class="hover:text-palette-goldDark transition">Request Appointment</a>
       </nav>
 
-      <!-- Language & Appointment CTA -->
+      <!-- Language & Phone CTA -->
       <div class="flex items-center space-x-3">
         <button id="lang-toggle" onclick="toggleLanguage()" class="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-palette-goldDark/40 hover:border-palette-goldDark bg-palette-champagne transition text-palette-charcoalDark">
           <span>🌐</span>
           <span id="lang-label">ESPAÑOL</span>
         </button>
 
-        <a href="#appointment" data-i18n="nav-cta" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs uppercase tracking-widest font-semibold bg-palette-black text-palette-champagne hover:bg-palette-goldDark transition rounded-sm shadow-sm">
-          Book Appointment
+        <a href="tel:4052520507" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs uppercase tracking-widest font-semibold bg-palette-black text-palette-champagne hover:bg-palette-goldDark transition rounded-sm shadow-sm">
+          (405) 252-0507
         </a>
       </div>
     </div>
@@ -103,7 +103,7 @@
           </h1>
 
           <p data-i18n="hero-desc" class="text-base sm:text-lg text-palette-charcoalDark font-normal max-w-xl leading-relaxed">
-            Welcome to Your Dream, Our Mission. Schedule an in-person or virtual consultation with our attorneys to discuss your immigration pathway.
+            Welcome to Your Dream, Our Mission. Schedule an in-person consultation at our South Oklahoma City office or a virtual appointment to discuss your immigration pathway.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
@@ -119,7 +119,6 @@
         <!-- Right Side: Logo Emblem Card -->
         <div class="lg:col-span-5 flex justify-center items-center">
           <div class="relative w-full max-w-sm flex items-center justify-center p-6">
-            <!-- Subtle gold ambient glow -->
             <div class="absolute w-64 h-64 bg-palette-goldMed/25 rounded-full blur-3xl pointer-events-none"></div>
             <img 
               src="logo.png" 
@@ -129,6 +128,43 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ==================== ATTORNEYS SECTION ==================== -->
+    <section id="attorneys" class="py-20 border-b border-palette-goldSoft/30 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span data-i18n="attorney-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Legal Team</span>
+        <h2 data-i18n="attorney-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">Our Attorneys</h2>
+        <p data-i18n="attorney-desc" class="text-sm text-palette-charcoalLight mt-3">
+          Dedicated, compassionate advocates fighting for your future and family reunification.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Attorney 1 -->
+        <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/50 space-y-4 shadow-sm hover:border-palette-goldDark transition">
+          <div class="space-y-1">
+            <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
+            <p data-i18n="atty-role" class="text-xs uppercase tracking-wider font-semibold text-palette-goldDark">Attorney at Law</p>
+          </div>
+          <div class="text-xs text-palette-charcoalLight space-y-1.5 pt-2 border-t border-palette-goldSoft/30">
+            <p><strong data-i18n="atty-admitted">Admitted to Bar:</strong> September 26, 2023</p>
+            <p><strong>Email:</strong> <a href="mailto:yovanalmedina@yourdreamourmission.com" class="hover:text-palette-goldDark transition underline">yovanalmedina@yourdreamourmission.com</a></p>
+          </div>
+        </div>
+
+        <!-- Attorney 2 -->
+        <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/50 space-y-4 shadow-sm hover:border-palette-goldDark transition">
+          <div class="space-y-1">
+            <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
+            <p data-i18n="atty-role" class="text-xs uppercase tracking-wider font-semibold text-palette-goldDark">Attorney at Law</p>
+          </div>
+          <div class="text-xs text-palette-charcoalLight space-y-1.5 pt-2 border-t border-palette-goldSoft/30">
+            <p><strong data-i18n="atty-admitted">Admitted to Bar:</strong> Licensed Attorney</p>
+            <p><strong>Email:</strong> <a href="mailto:justinag@yourdreamourmission.com" class="hover:text-palette-goldDark transition underline">justinag@yourdreamourmission.com</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -180,31 +216,43 @@
         <div class="grid lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-5 space-y-6">
             <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/40 space-y-5 shadow-sm">
-              <h3 data-i18n="loc-card-title" class="font-cinzel text-base font-bold text-palette-black">Office Information</h3>
+              <h3 data-i18n="loc-card-title" class="font-cinzel text-base font-bold text-palette-black">Office & Contact Details</h3>
               
-              <div class="space-y-1 text-sm text-palette-charcoalDark">
-                <div class="font-semibold text-palette-black font-cinzel">Your Dream, Our Mission Law Firm</div>
-                <div>123 Legal Avenue, Suite 400</div>
-                <div>City, State, ZIP</div>
+              <!-- Physical Address -->
+              <div class="space-y-1 text-xs text-palette-charcoalDark">
+                <div class="font-bold uppercase tracking-wider text-palette-goldDark" data-i18n="loc-physical-hdr">Physical Office Address</div>
+                <div class="font-medium text-palette-black text-sm">8801 S. Olie Ave, Building 5</div>
+                <div>Oklahoma City, OK 73139</div>
               </div>
 
-              <div class="pt-4 border-t border-palette-goldSoft/30 space-y-2 text-sm text-palette-charcoalDark">
-                <div><strong data-i18n="loc-phone">Phone:</strong> <a href="tel:+15551234567" class="hover:text-palette-goldDark transition">+1 (555) 123-4567</a></div>
-                <div><strong data-i18n="loc-email">Email:</strong> <a href="mailto:contact@yourdreamlaw.com" class="hover:text-palette-goldDark transition">contact@yourdreamlaw.com</a></div>
+              <!-- Mailing Address -->
+              <div class="space-y-1 text-xs text-palette-charcoalDark pt-3 border-t border-palette-goldSoft/30">
+                <div class="font-bold uppercase tracking-wider text-palette-goldDark" data-i18n="loc-mailing-hdr">Mailing Address</div>
+                <div class="font-medium text-palette-black">9201 S Pennsylvania Ave, PO Box # 890550</div>
+                <div>Oklahoma City, OK 73189</div>
               </div>
 
-              <div class="pt-4 border-t border-palette-goldSoft/30 text-xs text-palette-charcoalLight space-y-1">
+              <!-- Direct Phone -->
+              <div class="pt-3 border-t border-palette-goldSoft/30 space-y-2 text-sm text-palette-charcoalDark">
+                <div><strong data-i18n="loc-phone">Office Phone:</strong> <a href="tel:4052520507" class="hover:text-palette-goldDark transition font-semibold text-palette-black">(405) 252-0507</a></div>
+              </div>
+
+              <!-- Detailed Operating Hours -->
+              <div class="pt-3 border-t border-palette-goldSoft/30 text-xs text-palette-charcoalLight space-y-1">
                 <div class="font-semibold uppercase tracking-wider text-palette-black font-cinzel text-[11px]" data-i18n="loc-hours-title">Hours of Operation</div>
-                <div data-i18n="loc-hours-wk">Monday – Friday: 9:00 AM – 5:00 PM</div>
-                <div data-i18n="loc-hours-sat">Saturday: By Appointment Only</div>
-                <div data-i18n="loc-hours-sun">Sunday: Closed</div>
+                <div class="font-medium text-palette-black" data-i18n="loc-hours-mon-thu">Monday – Thursday:</div>
+                <div class="pl-2 text-palette-charcoalDark" data-i18n="loc-hours-mon-thu-times">8:00 AM – 12:00 PM &amp; 1:00 PM – 5:00 PM</div>
+                <div class="font-medium text-palette-black pt-1" data-i18n="loc-hours-fri">Friday:</div>
+                <div class="pl-2 text-palette-charcoalDark" data-i18n="loc-hours-fri-times">8:00 AM – 12:00 PM</div>
+                <div class="pt-1 text-palette-charcoalLight italic" data-i18n="loc-hours-weekend">Saturday &amp; Sunday: Closed</div>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-7 bg-palette-champagne rounded-sm border border-palette-goldSoft/40 overflow-hidden h-[380px] shadow-sm">
+          <!-- Oklahoma City Map Location -->
+          <div class="lg:col-span-7 bg-palette-champagne rounded-sm border border-palette-goldSoft/40 overflow-hidden h-[440px] shadow-sm">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105000.751234!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+              src="https://maps.google.com/maps?q=8801+S+Olie+Ave,+Oklahoma+City,+OK+73139&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               class="w-full h-full border-0" 
               allowfullscreen="" 
               loading="lazy">
@@ -220,7 +268,7 @@
         <div class="text-center mb-10">
           <span data-i18n="form-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Consultation</span>
           <h2 data-i18n="form-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">Request An Appointment</h2>
-          <p data-i18n="form-sub" class="text-sm text-palette-charcoalLight mt-2">Send us a message to schedule an initial discussion with our office.</p>
+          <p data-i18n="form-sub" class="text-sm text-palette-charcoalLight mt-2">Send us a message to schedule an initial consultation with our attorneys.</p>
         </div>
 
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-palette-champagne p-8 sm:p-12 border border-palette-goldSoft/40 rounded-sm shadow-sm">
@@ -238,12 +286,12 @@
           <div class="grid sm:grid-cols-2 gap-6">
             <div>
               <label data-i18n="f-phone" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Phone Number</label>
-              <input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black" />
+              <input type="tel" name="phone" placeholder="(405) 000-0000" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black" />
             </div>
             <div>
               <label data-i18n="f-type" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Appointment Type</label>
               <select name="appointment_type" id="appt-select" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black">
-                <option value="in-person">In-Person at Office</option>
+                <option value="in-person">In-Person at OKC Office</option>
                 <option value="phone">Phone Consultation</option>
                 <option value="video">Virtual / Video Call</option>
               </select>
@@ -278,11 +326,15 @@
             class="h-9 w-auto object-contain mix-blend-multiply"
           />
         </div>
-        <span class="text-palette-champagne/60 font-cinzel text-[11px]">&copy; 2026 Your Dream Our Mission Law Firm. All rights reserved.</span>
+        <div class="flex flex-col">
+          <span class="text-palette-champagne/90 font-cinzel text-[11px]">Your Dream, Our Mission Law Firm</span>
+          <span class="text-palette-champagne/50 text-[10px]">8801 S. Olie Ave, Bldg 5, Oklahoma City, OK 73139 &bull; (405) 252-0507</span>
+        </div>
       </div>
 
       <div class="flex space-x-6 uppercase tracking-wider text-[10px]">
         <a href="#location" data-i18n="nav-location" class="hover:text-palette-goldMed transition">Office & Map</a>
+        <a href="#attorneys" data-i18n="nav-attorneys" class="hover:text-palette-goldMed transition">Attorneys</a>
         <a href="#services" data-i18n="nav-services" class="hover:text-palette-goldMed transition">Services</a>
         <a href="#appointment" data-i18n="nav-cta" class="hover:text-palette-goldMed transition">Appointments</a>
       </div>
@@ -296,14 +348,20 @@
     const translations = {
       en: {
         'nav-services': 'Services',
+        'nav-attorneys': 'Attorneys',
         'nav-location': 'Office & Map',
         'nav-cta': 'Request Appointment',
         'hero-tag': 'Immigration Law Office',
         'hero-h1-a': 'Guiding your journey with',
         'hero-h1-b': 'dedicated legal counsel',
-        'hero-desc': 'Welcome to Your Dream, Our Mission. Schedule an in-person or virtual consultation with our attorneys to discuss your immigration pathway.',
+        'hero-desc': 'Welcome to Your Dream, Our Mission. Schedule an in-person consultation at our South Oklahoma City office or a virtual appointment to discuss your immigration pathway.',
         'hero-cta-primary': 'Request An Appointment',
         'hero-cta-secondary': 'Find Our Office →',
+        'attorney-badge': 'Legal Team',
+        'attorney-title': 'Our Attorneys',
+        'attorney-desc': 'Dedicated, compassionate advocates fighting for your future and family reunification.',
+        'atty-role': 'Attorney at Law',
+        'atty-admitted': 'Admitted to Bar:',
         'srv-badge': 'Legal Services',
         'srv-title': 'How We Can Assist You',
         'srv-desc': 'We offer comprehensive legal representation across key areas of United States immigration law.',
@@ -317,16 +375,19 @@
         's4-desc': 'Asylum petitions, Temporary Protected Status (TPS), U/T visas, and domestic survivor protections.',
         'loc-badge': 'Visit Our Office',
         'loc-title': 'Office Location & Hours',
-        'loc-card-title': 'Office Information',
-        'loc-phone': 'Phone:',
-        'loc-email': 'Email:',
+        'loc-card-title': 'Office & Contact Details',
+        'loc-physical-hdr': 'Physical Office Address',
+        'loc-mailing-hdr': 'Mailing Address',
+        'loc-phone': 'Office Phone:',
         'loc-hours-title': 'Hours of Operation',
-        'loc-hours-wk': 'Monday – Friday: 9:00 AM – 5:00 PM',
-        'loc-hours-sat': 'Saturday: By Appointment Only',
-        'loc-hours-sun': 'Sunday: Closed',
+        'loc-hours-mon-thu': 'Monday – Thursday:',
+        'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM & 1:00 PM – 5:00 PM',
+        'loc-hours-fri': 'Friday:',
+        'loc-hours-fri-times': '8:00 AM – 12:00 PM',
+        'loc-hours-weekend': 'Saturday & Sunday: Closed',
         'form-badge': 'Consultation',
         'form-title': 'Request An Appointment',
-        'form-sub': 'Send us a message to schedule an initial discussion with our office.',
+        'form-sub': 'Send us a message to schedule an initial consultation with our attorneys.',
         'f-name': 'Full Name',
         'f-email': 'Email Address',
         'f-phone': 'Phone Number',
@@ -338,37 +399,46 @@
       },
       es: {
         'nav-services': 'Servicios',
-        'nav-location': 'Ubicación y Mapa',
+        'nav-attorneys': 'Abogadas',
+        'nav-location': 'Ubicación y Horario',
         'nav-cta': 'Solicitar Cita',
         'hero-tag': 'Bufete de Inmigración',
         'hero-h1-a': 'Guiando su camino con',
         'hero-h1-b': 'asesoría legal dedicada',
-        'hero-desc': 'Bienvenido a Your Dream, Our Mission. Programe una consulta presencial o virtual con nuestros abogados para evaluar sus opciones de inmigración.',
+        'hero-desc': 'Bienvenido a Your Dream, Our Mission. Programe una consulta presencial en nuestra oficina en Oklahoma City o una consulta virtual.',
         'hero-cta-primary': 'Solicitar Una Cita',
         'hero-cta-secondary': 'Ver Nuestra Oficina →',
+        'attorney-badge': 'Equipo Legal',
+        'attorney-title': 'Nuestras Abogadas',
+        'attorney-desc': 'Defensoras dedicadas y compasivas comprometidas con su futuro y la reunificación familiar.',
+        'atty-role': 'Abogada de Inmigración',
+        'atty-admitted': 'Fecha de Admisión:',
         'srv-badge': 'Servicios Legales',
         'srv-title': 'En Qué Podemos Ayudarle',
         'srv-desc': 'Ofrecemos representación legal completa en las áreas fundamentales de las leyes de inmigración de EE. UU.',
         's1-title': 'Inmigración Familiar',
         's1-desc': 'Residencias por matrimonio, peticiones de padres/hijos, visas de prometido y preparación consular.',
         's2-title': 'Empleo y Negocios',
-        's2-desc': 'Permisos de trabajo, visas de trabajo especializado (H-1B, L-1, O-1) y residencias por patrocinio laboral.',
+        's2-desc': 'Permisos de trabajo, visas de trabajo especializado (H-1B, L-1, O-1) y residencias laborales.',
         's3-title': 'Naturalización',
         's3-desc': 'Trámite del formulario N-400 para ciudadanía, preparación para el examen cívico y acompañamiento.',
         's4-title': 'Ayuda Humanitaria',
         's4-desc': 'Peticiones de asilo, TPS, visas humanitarias U/T y protección bajo la ley VAWA.',
         'loc-badge': 'Visite Nuestra Oficina',
         'loc-title': 'Ubicación y Horarios',
-        'loc-card-title': 'Información de la Oficina',
+        'loc-card-title': 'Información y Contacto',
+        'loc-physical-hdr': 'Dirección Física de la Oficina',
+        'loc-mailing-hdr': 'Dirección Postal (Mailing)',
         'loc-phone': 'Teléfono:',
-        'loc-email': 'Correo:',
         'loc-hours-title': 'Horario de Atención',
-        'loc-hours-wk': 'Lunes – Viernes: 9:00 AM – 5:00 PM',
-        'loc-hours-sat': 'Sábado: Solo con Cita Previa',
-        'loc-hours-sun': 'Domingo: Cerrado',
+        'loc-hours-mon-thu': 'Lunes a Jueves:',
+        'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM y 1:00 PM – 5:00 PM',
+        'loc-hours-fri': 'Viernes:',
+        'loc-hours-fri-times': '8:00 AM – 12:00 PM',
+        'loc-hours-weekend': 'Sábado y Domingo: Cerrado',
         'form-badge': 'Consulta',
         'form-title': 'Solicitar Una Cita',
-        'form-sub': 'Envíenos un mensaje para coordinar su primera consulta con nuestra oficina.',
+        'form-sub': 'Envíenos un mensaje para coordinar su primera consulta con nuestras abogadas.',
         'f-name': 'Nombre Completo',
         'f-email': 'Correo Electrónico',
         'f-phone': 'Teléfono',
@@ -397,11 +467,11 @@
 
       const select = document.getElementById('appt-select');
       if (currentLang === 'es') {
-        select.options[0].text = 'En Persona en la Oficina';
+        select.options[0].text = 'En Persona en Oficina de OKC';
         select.options[1].text = 'Consulta Telefónica';
         select.options[2].text = 'Videollamada / Virtual';
       } else {
-        select.options[0].text = 'In-Person at Office';
+        select.options[0].text = 'In-Person at OKC Office';
         select.options[1].text = 'Phone Consultation';
         select.options[2].text = 'Virtual / Video Call';
       }
