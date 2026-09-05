@@ -43,20 +43,25 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-navy/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <a href="#" class="flex items-center py-2">
-        <img 
-          src="logo.png" 
-          alt="Your Dream, Our Mission - Attorneys at Law" 
-          class="h-14 sm:h-16 w-auto object-contain mix-blend-multiply"
-        />
+      <!-- Top-Left Nav Logo: Seamless blended with clipped right border line -->
+      <a href="#" class="flex items-center group py-1">
+        <div class="overflow-hidden max-w-[190px] sm:max-w-[210px] flex items-center">
+          <img 
+            src="logo.png" 
+            alt="Your Dream Our Mission - Attorneys at Law" 
+            class="h-14 sm:h-16 w-auto object-contain mix-blend-multiply -mr-4 transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
       </a>
 
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
         <a href="#services" data-i18n="nav-services" class="text-brand-navy/75 hover:text-brand-navy transition">Services</a>
         <a href="#location" data-i18n="nav-location" class="text-brand-navy/75 hover:text-brand-navy transition">Office & Map</a>
         <a href="#appointment" data-i18n="nav-cta" class="text-brand-navy/75 hover:text-brand-navy transition">Request Appointment</a>
       </nav>
 
+      <!-- Language & Appointment CTA -->
       <div class="flex items-center space-x-3">
         <button id="lang-toggle" onclick="toggleLanguage()" class="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-brand-navy/20 hover:border-brand-navy transition">
           <span>🌐</span>
@@ -99,15 +104,18 @@
           </div>
         </div>
 
-        <!-- Right Side: Logo with overflow mask to clip off the right border line -->
+        <!-- Right Side: Clean Blended Hero Emblem -->
         <div class="lg:col-span-5 flex justify-center items-center">
-          <div class="relative w-full max-w-sm flex items-center justify-center p-4">
-            <div class="absolute w-64 h-64 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="relative z-10 overflow-hidden max-w-[310px] flex justify-center">
+          <div class="relative w-full max-w-sm flex items-center justify-center p-6">
+            <!-- Subtle warm background glow to soften edges -->
+            <div class="absolute w-72 h-72 bg-brand-gold/25 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <!-- Overflow clip to mask the black crop border on the right -->
+            <div class="relative z-10 overflow-hidden max-w-[305px] flex justify-center">
               <img 
                 src="logo.png" 
                 alt="Your Dream Our Mission Logo" 
-                class="w-full max-w-[340px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105 -mr-5"
+                class="w-full max-w-[335px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105 -mr-5"
               />
             </div>
           </div>
@@ -254,12 +262,14 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-brand-navy text-brand-cream/70 py-10 text-xs border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      
+      <!-- Footer Logo: Integrated with clipped boundary and rounded cream frame -->
       <div class="flex items-center space-x-3">
-        <div class="bg-brand-cream/90 p-1.5 rounded-sm">
+        <div class="bg-brand-cream/95 p-1 rounded-sm overflow-hidden flex items-center">
           <img 
             src="logo.png" 
             alt="Your Dream Our Mission" 
-            class="h-8 w-auto object-contain mix-blend-multiply"
+            class="h-8 w-auto object-contain mix-blend-multiply -mr-2"
           />
         </div>
         <span class="text-brand-cream/50">&copy; 2026 Your Dream Our Mission Law Firm. All rights reserved.</span>
@@ -393,3 +403,5 @@
   </script>
 </body>
 </html>
+
+```
