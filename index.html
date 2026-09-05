@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Dream Our Mission | Attorneys at Law</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#121B24',
+              slate: '#1E2C37',
+              cream: '#FAF9F5',
+              sand: '#F2EFE9',
+              gold: '#C5A880',
+              accent: '#3E5C52',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-cream text-brand-navy font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-navy/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Nav Logo -->
+      <a href="#" class="flex items-center py-2">
+        <img 
+          src="logo.png" 
+          alt="Your Dream, Our Mission - Attorneys at Law" 
+          class="h-12 w-auto object-contain"
+        />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="#services" data-i18n="nav-services" class="text-brand-navy/75 hover:text-brand-navy transition">Services</a>
+        <a href="#location" data-i18n="nav-location" class="text-brand-navy/75 hover:text-brand-navy transition">Office & Map</a>
+        <a href="#appointment" data-i18n="nav-cta" class="text-brand-navy/75 hover:text-brand-navy transition">Request Appointment</a>
+      </nav>
+
+      <!-- Language & Appointment CTA -->
+      <div class="flex items-center space-x-3">
+        <button id="lang-toggle" onclick="toggleLanguage()" class="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-brand-navy/20 hover:border-brand-navy transition">
+          <span>🌐</span>
+          <span id="lang-label">ESPAÑOL</span>
+        </button>
+
+        <a href="#appointment" data-i18n="nav-cta" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-navy text-brand-cream hover:bg-brand-accent transition rounded-sm">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="border-b border-brand-navy/5 py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2 border border-brand-navy/10 px-3 py-1 rounded-full text-xs uppercase tracking-widest text-brand-navy/70">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+            <span data-i18n="hero-tag">Immigration Law Office</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-semibold leading-[1.15] tracking-tight">
+            <span data-i18n="hero-h1-a">Guiding your journey with</span> <span class="italic font-normal" data-i18n="hero-h1-b">dedicated legal counsel</span>.
+          </h1>
+
+          <p data-i18n="hero-desc" class="text-base sm:text-lg text-brand-navy/70 font-normal max-w-xl leading-relaxed">
+            Welcome to Your Dream, Our Mission. Schedule an in-person or virtual consultation with our attorneys to discuss your immigration pathway.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+            <a href="#appointment" data-i18n="hero-cta-primary" class="inline-flex items-center justify-center px-7 py-4 text-xs font-semibold uppercase tracking-widest bg-brand-navy text-white hover:bg-brand-accent transition rounded-sm text-center">
+              Request An Appointment
+            </a>
+            <a href="#location" data-i18n="hero-cta-secondary" class="inline-flex items-center justify-center px-7 py-4 text-xs font-semibold uppercase tracking-widest border border-brand-navy/20 hover:border-brand-navy transition rounded-sm text-center">
+              Find Our Office &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Logo Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-sm aspect-square bg-brand-sand/60 rounded-sm border border-brand-navy/10 p-10 flex items-center justify-center shadow-sm">
+            <img 
+              src="logo.png" 
+              alt="Your Dream Our Mission Logo" 
+              class="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span data-i18n="srv-badge" class="text-xs uppercase tracking-widest font-semibold text-brand-accent block mb-2">Legal Services</span>
+        <h2 data-i18n="srv-title" class="font-serif text-3xl sm:text-4xl font-semibold">How We Can Assist You</h2>
+        <p data-i18n="srv-desc" class="text-sm text-brand-navy/60 mt-3">
+          We offer comprehensive legal representation across key areas of United States immigration law.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-brand-sand/50 rounded-sm border border-brand-navy/5 space-y-3">
+          <div class="text-xs font-mono text-brand-gold font-bold">01</div>
+          <h3 data-i18n="s1-title" class="font-serif text-lg font-semibold">Family Immigration</h3>
+          <p data-i18n="s1-desc" class="text-xs text-brand-navy/70 leading-relaxed">Spousal green cards, parent & child petitions, fiancé visas, and consular interview preparation.</p>
+        </div>
+
+        <div class="p-6 bg-brand-sand/50 rounded-sm border border-brand-navy/5 space-y-3">
+          <div class="text-xs font-mono text-brand-gold font-bold">02</div>
+          <h3 data-i18n="s2-title" class="font-serif text-lg font-semibold">Employment & Business</h3>
+          <p data-i18n="s2-desc" class="text-xs text-brand-navy/70 leading-relaxed">Work authorization, specialty worker visas (H-1B, L-1, O-1), and permanent residency sponsorship.</p>
+        </div>
+
+        <div class="p-6 bg-brand-sand/50 rounded-sm border border-brand-navy/5 space-y-3">
+          <div class="text-xs font-mono text-brand-gold font-bold">03</div>
+          <h3 data-i18n="s3-title" class="font-serif text-lg font-semibold">Naturalization</h3>
+          <p data-i18n="s3-desc" class="text-xs text-brand-navy/70 leading-relaxed">Assistance with N-400 citizenship applications, civics testing prep, and interview representation.</p>
+        </div>
+
+        <div class="p-6 bg-brand-sand/50 rounded-sm border border-brand-navy/5 space-y-3">
+          <div class="text-xs font-mono text-brand-gold font-bold">04</div>
+          <h3 data-i18n="s4-title" class="font-serif text-lg font-semibold">Humanitarian Relief</h3>
+          <p data-i18n="s4-desc" class="text-xs text-brand-navy/70 leading-relaxed">Asylum petitions, Temporary Protected Status (TPS), U/T visas, and domestic survivor protections.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOCATION & CONTACT INFO ==================== -->
+    <section id="location" class="py-20 bg-brand-sand/40 border-t border-brand-navy/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-12">
+          <span data-i18n="loc-badge" class="text-xs uppercase tracking-widest font-semibold text-brand-accent block mb-2">Visit Our Office</span>
+          <h2 data-i18n="loc-title" class="font-serif text-3xl font-semibold">Office Location & Hours</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <!-- Address & Hours Cards -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white p-6 rounded-sm border border-brand-navy/10 space-y-4">
+              <h3 data-i18n="loc-card-title" class="font-serif text-lg font-semibold">Office Information</h3>
+              
+              <div class="space-y-1 text-sm text-brand-navy/80">
+                <div class="font-semibold text-brand-navy">Your Dream, Our Mission Law Firm</div>
+                <div>123 Legal Avenue, Suite 400</div>
+                <div>City, State, ZIP</div>
+              </div>
+
+              <div class="pt-4 border-t border-brand-navy/10 space-y-2 text-sm text-brand-navy/80">
+                <div><strong data-i18n="loc-phone">Phone:</strong> <a href="tel:+15551234567" class="hover:text-brand-accent transition">+1 (555) 123-4567</a></div>
+                <div><strong data-i18n="loc-email">Email:</strong> <a href="mailto:contact@yourdreamlaw.com" class="hover:text-brand-accent transition">contact@yourdreamlaw.com</a></div>
+              </div>
+
+              <div class="pt-4 border-t border-brand-navy/10 text-xs text-brand-navy/70 space-y-1">
+                <div class="font-semibold uppercase tracking-wider text-brand-navy" data-i18n="loc-hours-title">Hours of Operation</div>
+                <div data-i18n="loc-hours-wk">Monday – Friday: 9:00 AM – 5:00 PM</div>
+                <div data-i18n="loc-hours-sat">Saturday: By Appointment Only</div>
+                <div data-i18n="loc-hours-sun">Sunday: Closed</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed Placeholder -->
+          <div class="lg:col-span-7 bg-white rounded-sm border border-brand-navy/10 overflow-hidden h-[360px] shadow-sm">
+            <!-- Replace the src below with your actual Google Maps Embed link -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105000.751234!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== APPOINTMENT REQUEST FORM ==================== -->
+    <section id="appointment" class="py-20 border-t border-brand-navy/5">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+          <span data-i18n="form-badge" class="text-xs uppercase tracking-widest font-semibold text-brand-accent block mb-2">Consultation</span>
+          <h2 data-i18n="form-title" class="font-serif text-3xl font-semibold">Request An Appointment</h2>
+          <p data-i18n="form-sub" class="text-sm text-brand-navy/60 mt-2">Send us a message to schedule an initial discussion with our office.</p>
+        </div>
+
+        <!-- Connect to Formspree by inserting your endpoint ID in action="https://formspree.io/f/YOUR_ID" -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-white p-8 sm:p-10 border border-brand-navy/10 rounded-sm shadow-sm">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label data-i18n="f-name" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-brand-navy/80">Full Name</label>
+              <input type="text" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 bg-brand-cream/40 border border-brand-navy/15 rounded-sm focus:outline-none focus:border-brand-navy text-sm" />
+            </div>
+            <div>
+              <label data-i18n="f-email" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-brand-navy/80">Email Address</label>
+              <input type="email" name="email" required placeholder="jane@example.com" class="w-full px-4 py-3 bg-brand-cream/40 border border-brand-navy/15 rounded-sm focus:outline-none focus:border-brand-navy text-sm" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label data-i18n="f-phone" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-brand-navy/80">Phone Number</label>
+              <input type="tel" name="phone" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 bg-brand-cream/40 border border-brand-navy/15 rounded-sm focus:outline-none focus:border-brand-navy text-sm" />
+            </div>
+            <div>
+              <label data-i18n="f-type" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-brand-navy/80">Appointment Type</label>
+              <select name="appointment_type" id="appt-select" class="w-full px-4 py-3 bg-brand-cream/40 border border-brand-navy/15 rounded-sm focus:outline-none focus:border-brand-navy text-sm text-brand-navy">
+                <option value="in-person">In-Person at Office</option>
+                <option value="phone">Phone Consultation</option>
+                <option value="video">Virtual / Video Call</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label data-i18n="f-msg" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-brand-navy/80">Preferred Dates & How We Can Help</label>
+            <textarea name="message" rows="4" data-i18n-ph="f-msg-ph" placeholder="Please mention your preferred days/times and what service you are looking for..." class="w-full px-4 py-3 bg-brand-cream/40 border border-brand-navy/15 rounded-sm focus:outline-none focus:border-brand-navy text-sm"></textarea>
+          </div>
+
+          <button type="submit" data-i18n="f-btn" class="w-full py-4 bg-brand-navy text-white text-xs uppercase tracking-widest font-semibold hover:bg-brand-accent transition rounded-sm">
+            Send Appointment Request
+          </button>
+
+          <p data-i18n="f-disclaimer" class="text-[11px] text-center text-brand-navy/50 leading-relaxed">
+            *Inquiries sent through this form are for appointment scheduling only and do not constitute an attorney-client relationship.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-brand-navy text-brand-cream/70 py-10 text-xs border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-3">
+        <img 
+          src="logo.png" 
+          alt="Your Dream Our Mission" 
+          class="h-8 w-auto object-contain bg-brand-cream/10 p-1 rounded"
+        />
+        <span class="text-brand-cream/50">&copy; 2026 Your Dream Our Mission Law Firm. All rights reserved.</span>
+      </div>
+
+      <div class="flex space-x-6 uppercase tracking-wider text-[10px]">
+        <a href="#location" data-i18n="nav-location" class="hover:text-white transition">Office & Map</a>
+        <a href="#services" data-i18n="nav-services" class="hover:text-white transition">Services</a>
+        <a href="#appointment" data-i18n="nav-cta" class="hover:text-white transition">Appointments</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LANGUAGE SWITCHER SCRIPT ==================== -->
+  <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        'nav-services': 'Services',
+        'nav-location': 'Office & Map',
+        'nav-cta': 'Request Appointment',
+        'hero-tag': 'Immigration Law Office',
+        'hero-h1-a': 'Guiding your journey with',
+        'hero-h1-b': 'dedicated legal counsel',
+        'hero-desc': 'Welcome to Your Dream, Our Mission. Schedule an in-person or virtual consultation with our attorneys to discuss your immigration pathway.',
+        'hero-cta-primary': 'Request An Appointment',
+        'hero-cta-secondary': 'Find Our Office →',
+        'srv-badge': 'Legal Services',
+        'srv-title': 'How We Can Assist You',
+        'srv-desc': 'We offer comprehensive legal representation across key areas of United States immigration law.',
+        's1-title': 'Family Immigration',
+        's1-desc': 'Spousal green cards, parent & child petitions, fiancé visas, and consular interview preparation.',
+        's2-title': 'Employment & Business',
+        's2-desc': 'Work authorization, specialty worker visas (H-1B, L-1, O-1), and permanent residency sponsorship.',
+        's3-title': 'Naturalization',
+        's3-desc': 'Assistance with N-400 citizenship applications, civics testing prep, and interview representation.',
+        's4-title': 'Humanitarian Relief',
+        's4-desc': 'Asylum petitions, Temporary Protected Status (TPS), U/T visas, and domestic survivor protections.',
+        'loc-badge': 'Visit Our Office',
+        'loc-title': 'Office Location & Hours',
+        'loc-card-title': 'Office Information',
+        'loc-phone': 'Phone:',
+        'loc-email': 'Email:',
+        'loc-hours-title': 'Hours of Operation',
+        'loc-hours-wk': 'Monday – Friday: 9:00 AM – 5:00 PM',
+        'loc-hours-sat': 'Saturday: By Appointment Only',
+        'loc-hours-sun': 'Sunday: Closed',
+        'form-badge': 'Consultation',
+        'form-title': 'Request An Appointment',
+        'form-sub': 'Send us a message to schedule an initial discussion with our office.',
+        'f-name': 'Full Name',
+        'f-email': 'Email Address',
+        'f-phone': 'Phone Number',
+        'f-type': 'Appointment Type',
+        'f-msg': 'Preferred Dates & How We Can Help',
+        'f-msg-ph': 'Please mention your preferred days/times and what service you are looking for...',
+        'f-btn': 'Send Appointment Request',
+        'f-disclaimer': '*Inquiries sent through this form are for appointment scheduling only and do not constitute an attorney-client relationship.'
+      },
+      es: {
+        'nav-services': 'Servicios',
+        'nav-location': 'Ubicación y Mapa',
+        'nav-cta': 'Solicitar Cita',
+        'hero-tag': 'Bufete de Inmigración',
+        'hero-h1-a': 'Guiando su camino con',
+        'hero-h1-b': 'asesoría legal dedicada',
+        'hero-desc': 'Bienvenido a Your Dream, Our Mission. Programe una consulta presencial o virtual con nuestros abogados para evaluar sus opciones de inmigración.',
+        'hero-cta-primary': 'Solicitar Una Cita',
+        'hero-cta-secondary': 'Ver Nuestra Oficina →',
+        'srv-badge': 'Servicios Legales',
+        'srv-title': 'En Qué Podemos Ayudarle',
+        'srv-desc': 'Ofrecemos representación legal completa en las áreas fundamentales de las leyes de inmigración de EE. UU.',
+        's1-title': 'Inmigración Familiar',
+        's1-desc': 'Residencias por matrimonio, peticiones de padres/hijos, visas de prometido y preparación consular.',
+        's2-title': 'Empleo y Negocios',
+        's2-desc': 'Permisos de trabajo, visas de trabajo especializado (H-1B, L-1, O-1) y residencias por patrocinio laboral.',
+        's3-title': 'Naturalización',
+        's3-desc': 'Trámite del formulario N-400 para ciudadanía, preparación para el examen cívico y acompañamiento.',
+        's4-title': 'Ayuda Humanitaria',
+        's4-desc': 'Peticiones de asilo, TPS, visas humanitarias U/T y protección bajo la ley VAWA.',
+        'loc-badge': 'Visite Nuestra Oficina',
+        'loc-title': 'Ubicación y Horarios',
+        'loc-card-title': 'Información de la Oficina',
+        'loc-phone': 'Teléfono:',
+        'loc-email': 'Correo:',
+        'loc-hours-title': 'Horario de Atención',
+        'loc-hours-wk': 'Lunes – Viernes: 9:00 AM – 5:00 PM',
+        'loc-hours-sat': 'Sábado: Solo con Cita Previa',
+        'loc-hours-sun': 'Domingo: Cerrado',
+        'form-badge': 'Consulta',
+        'form-title': 'Solicitar Una Cita',
+        'form-sub': 'Envíenos un mensaje para coordinar su primera consulta con nuestra oficina.',
+        'f-name': 'Nombre Completo',
+        'f-email': 'Correo Electrónico',
+        'f-phone': 'Teléfono',
+        'f-type': 'Tipo de Cita',
+        'f-msg': 'Fechas de Preferencia y Caso',
+        'f-msg-ph': 'Indique sus días u horas de preferencia y el tipo de trámite que necesita...',
+        'f-btn': 'Enviar Solicitud de Cita',
+        'f-disclaimer': '*El envío de este mensaje es únicamente para agendar citas y no constituye una relación abogado-cliente.'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      document.getElementById('lang-label').textContent = currentLang === 'en' ? 'ESPAÑOL' : 'ENGLISH';
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
+      });
+
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.getAttribute('data-i18n-ph');
+        if (translations[currentLang][key]) el.placeholder = translations[currentLang][key];
+      });
+
+      const select = document.getElementById('appt-select');
+      if (currentLang === 'es') {
+        select.options[0].text = 'En Persona en la Oficina';
+        select.options[1].text = 'Consulta Telefónica';
+        select.options[2].text = 'Videollamada / Virtual';
+      } else {
+        select.options[0].text = 'In-Person at Office';
+        select.options[1].text = 'Phone Consultation';
+        select.options[2].text = 'Virtual / Video Call';
+      }
+    }
+  </script>
+</body>
+</html>
