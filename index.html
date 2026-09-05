@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -42,12 +43,12 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-navy/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <!-- Nav Logo -->
+      <!-- Nav Logo with mix-blend-multiply to eliminate the white box border -->
       <a href="#" class="flex items-center py-2">
         <img 
           src="logo.png" 
           alt="Your Dream, Our Mission - Attorneys at Law" 
-          class="h-12 w-auto object-contain"
+          class="h-14 sm:h-16 w-auto object-contain mix-blend-multiply"
         />
       </a>
 
@@ -101,13 +102,14 @@
           </div>
         </div>
 
-        <!-- Right Side: Logo Card -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-sm aspect-square bg-brand-sand/60 rounded-sm border border-brand-navy/10 p-10 flex items-center justify-center shadow-sm">
+        <!-- Right Side: Borderless Blended Emblem with Soft Glow -->
+        <div class="lg:col-span-5 flex justify-center items-center">
+          <div class="relative w-full max-w-sm flex items-center justify-center p-4">
+            <div class="absolute w-64 h-64 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
             <img 
               src="logo.png" 
               alt="Your Dream Our Mission Logo" 
-              class="w-full h-auto object-contain"
+              class="relative z-10 w-full max-w-[320px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105"
             />
           </div>
         </div>
@@ -188,7 +190,6 @@
 
           <!-- Google Maps Embed Placeholder -->
           <div class="lg:col-span-7 bg-white rounded-sm border border-brand-navy/10 overflow-hidden h-[360px] shadow-sm">
-            <!-- Replace the src below with your actual Google Maps Embed link -->
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105000.751234!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
               class="w-full h-full border-0" 
@@ -209,7 +210,6 @@
           <p data-i18n="form-sub" class="text-sm text-brand-navy/60 mt-2">Send us a message to schedule an initial discussion with our office.</p>
         </div>
 
-        <!-- Connect to Formspree by inserting your endpoint ID in action="https://formspree.io/f/YOUR_ID" -->
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-white p-8 sm:p-10 border border-brand-navy/10 rounded-sm shadow-sm">
           <div class="grid sm:grid-cols-2 gap-6">
             <div>
@@ -258,11 +258,13 @@
   <footer class="bg-brand-navy text-brand-cream/70 py-10 text-xs border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       <div class="flex items-center space-x-3">
-        <img 
-          src="logo.png" 
-          alt="Your Dream Our Mission" 
-          class="h-8 w-auto object-contain bg-brand-cream/10 p-1 rounded"
-        />
+        <div class="bg-brand-cream/90 p-1.5 rounded-sm">
+          <img 
+            src="logo.png" 
+            alt="Your Dream Our Mission" 
+            class="h-8 w-auto object-contain mix-blend-multiply"
+          />
+        </div>
         <span class="text-brand-cream/50">&copy; 2026 Your Dream Our Mission Law Firm. All rights reserved.</span>
       </div>
 
