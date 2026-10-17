@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Dream Our Mission | Attorneys at Law</title>
+  <title>Your Dream Our Mission, PLLC | Attorneys at Law</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Cinzel Decorative, Plus Jakarta Sans, and Great Vibes (Moontime fallback) -->
+  <!-- Google Fonts: Cinzel, Plus Jakarta Sans, and Great Vibes (Moontime fallback) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     @font-face {
@@ -31,17 +31,17 @@
         extend: {
           colors: {
             palette: {
-              black: '#000000',
-              charcoalLight: '#525050',
-              charcoalDark: '#454545',
-              goldDark: '#A7874F',
-              goldMed: '#CEAA6A',
+              cream: '#FFF7E9',      /* Updated per Phase 1 spec */
+              gold: '#A7874F',       /* Updated per Phase 1 spec */
+              goldHover: '#8C6F3E',
               goldSoft: '#C4A773',
-              champagne: '#E6DAC4',
+              black: '#000000',
+              charcoalDark: '#454545',
+              charcoalLight: '#525050',
             }
           },
           fontFamily: {
-            cinzel: ['"Cinzel Decorative"', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
@@ -49,226 +49,160 @@
     }
   </script>
 </head>
-<body class="bg-palette-champagne text-palette-black font-sans antialiased selection:bg-palette-goldMed selection:text-palette-black">
+<body class="bg-palette-cream text-palette-black font-sans antialiased selection:bg-palette-gold selection:text-white">
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-palette-champagne/95 backdrop-blur-md border-b border-palette-goldSoft/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-24 flex items-center justify-between">
+  <!-- ==================== HEADER & BUTTON-STYLE NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 bg-palette-cream/95 backdrop-blur-md border-b border-palette-gold/30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
       
-      <!-- Nav Logo -->
-      <a href="#" class="flex items-center py-2">
-        <img 
-          src="Logo V9.1 - Color Icon Only.svg" 
-          alt="Your Dream, Our Mission - Attorneys at Law" 
-          class="h-14 sm:h-16 w-auto object-contain mix-blend-multiply transition hover:opacity-90"
-        />
+      <!-- Brand Name (Tiny logo removed per Phase 1 spec) -->
+      <a href="javascript:void(0)" onclick="switchPage('home')" class="text-center md:text-left">
+        <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-palette-black block">Your Dream Our Mission</span>
+        <span class="font-moontime text-xl sm:text-2xl text-palette-gold lowercase -mt-1 block">Tu Sueño, Nuestra Misión</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-7 text-xs uppercase tracking-widest font-semibold text-palette-charcoalDark">
-        <a href="#services" data-i18n="nav-services" class="hover:text-palette-goldDark transition">Services</a>
-        <a href="#attorneys" data-i18n="nav-attorneys" class="hover:text-palette-goldDark transition">Attorneys</a>
-        <a href="#location" data-i18n="nav-location" class="hover:text-palette-goldDark transition">Office & Map</a>
-        <a href="#appointment" data-i18n="nav-cta" class="hover:text-palette-goldDark transition">Request Appointment</a>
+      <!-- Menu buttons designed explicitly as clickable rounded pill buttons in Phase 1 order -->
+      <nav class="flex flex-wrap items-center justify-center gap-2 text-xs font-cinzel font-bold">
+        <button onclick="switchPage('home')" id="btn-nav-home" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm">
+          Home
+        </button>
+        <button onclick="switchPage('story')" id="btn-nav-story" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+          Our Story
+        </button>
+        <button onclick="switchPage('attorneys')" id="btn-nav-attorneys" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+          Attorneys
+        </button>
+        <button onclick="switchPage('services')" id="btn-nav-services" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+          Services
+        </button>
+        <button onclick="switchPage('appointment')" id="btn-nav-appointment" class="nav-btn px-4 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm">
+          Request Appointment
+        </button>
       </nav>
 
-      <!-- Language & Phone CTA -->
+      <!-- Language Switcher & Quick Call -->
       <div class="flex items-center space-x-3">
-        <button id="lang-toggle" onclick="toggleLanguage()" class="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-palette-goldDark/40 hover:border-palette-goldDark bg-palette-champagne transition text-palette-charcoalDark">
-          <span>🌐</span>
-          <span id="lang-label">ESPAÑOL</span>
+        <button id="lang-toggle" onclick="toggleLanguage()" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-palette-gold/50 bg-white/50 text-palette-charcoalDark hover:border-palette-gold transition">
+          <span>🌐</span> <span id="lang-label">ESPAÑOL</span>
         </button>
-
-        <a href="tel:4052520507" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-xs uppercase tracking-widest font-semibold bg-palette-black text-palette-champagne hover:bg-palette-goldDark transition rounded-sm shadow-sm">
+        <a href="tel:4052520507" class="hidden lg:inline-flex px-3.5 py-1.5 text-xs font-bold font-cinzel border border-palette-gold text-palette-gold hover:bg-palette-gold hover:text-white transition rounded-sm">
           (405) 252-0507
         </a>
       </div>
     </div>
   </header>
 
-  <main class="pt-24">
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="border-b border-palette-goldSoft/30 py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center space-x-2 border border-palette-goldDark/30 px-3 py-1 rounded-full text-xs uppercase tracking-widest text-palette-charcoalDark bg-palette-champagne/50">
-            <span class="w-1.5 h-1.5 rounded-full bg-palette-goldDark"></span>
-            <span data-i18n="hero-tag">Immigration Law Office</span>
-          </div>
-
-          <h1 class="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] text-palette-black">
-            <span data-i18n="hero-h1-a">Guiding your journey with</span> 
-            <span class="font-moontime font-normal text-4xl sm:text-6xl lg:text-7xl block text-palette-goldDark lowercase -mt-1 sm:-mt-2" data-i18n="hero-h1-b">dedicated legal counsel</span>
-          </h1>
-
-          <p data-i18n="hero-desc" class="text-base sm:text-lg text-palette-charcoalDark font-normal max-w-xl leading-relaxed">
-            Welcome to Your Dream, Our Mission. Schedule an in-person consultation at our South Oklahoma City office or a virtual appointment to discuss your immigration pathway.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
-            <a href="#appointment" data-i18n="hero-cta-primary" class="inline-flex items-center justify-center px-8 py-4 text-xs font-semibold uppercase tracking-widest bg-palette-black text-palette-champagne hover:bg-palette-goldDark transition rounded-sm text-center shadow-md">
-              Request An Appointment
-            </a>
-            <a href="#location" data-i18n="hero-cta-secondary" class="inline-flex items-center justify-center px-8 py-4 text-xs font-semibold uppercase tracking-widest border border-palette-goldDark text-palette-charcoalDark hover:bg-palette-goldSoft/20 transition rounded-sm text-center">
-              Find Our Office &rarr;
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Side: Logo Emblem Card -->
-        <div class="lg:col-span-5 flex justify-center items-center">
-          <div class="relative w-full max-w-sm flex items-center justify-center p-6">
-            <div class="absolute w-64 h-64 bg-palette-goldMed/25 rounded-full blur-3xl pointer-events-none"></div>
-            <img 
-              src="Logo V9.1 - Full Color.svg" 
-              alt="Your Dream Our Mission Logo" 
-              class="relative z-10 w-full max-w-[320px] h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105"
-            />
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== ATTORNEYS SECTION ==================== -->
-    <section id="attorneys" class="py-20 border-b border-palette-goldSoft/30 max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span data-i18n="attorney-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Legal Team</span>
-        <h2 data-i18n="attorney-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">Our Attorneys</h2>
-        <p data-i18n="attorney-desc" class="text-sm text-palette-charcoalLight mt-3">
-          Dedicated, compassionate advocates fighting for your future and family reunification.
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Attorney 1 -->
-        <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/50 space-y-4 shadow-sm hover:border-palette-goldDark transition">
-          <div class="space-y-1">
-            <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
-            <p data-i18n="atty-role" class="text-xs uppercase tracking-wider font-semibold text-palette-goldDark">Attorney at Law</p>
-          </div>
-          <div class="text-xs text-palette-charcoalLight space-y-1.5 pt-2 border-t border-palette-goldSoft/30">
-            
-          </div>
-        </div>
-
-        <!-- Attorney 2 -->
-        <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/50 space-y-4 shadow-sm hover:border-palette-goldDark transition">
-          <div class="space-y-1">
-            <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
-            <p data-i18n="atty-role" class="text-xs uppercase tracking-wider font-semibold text-palette-goldDark">Attorney at Law</p>
-          </div>
-          <div class="text-xs text-palette-charcoalLight space-y-1.5 pt-2 border-t border-palette-goldSoft/30">
-            
-          </div>
-        </div>
-      </div>
-
+  <main>
+    <!-- ======================================================== -->
+    <!-- PAGE 1: HOME (Logo Left, Mission Right, Joint Picture Top Right) -->
+    <!-- ======================================================== -->
+    <div id="page-home" class="page-view">
       
+      <!-- Top Hero Block with Joint Picture on Top Right -->
+      <section class="border-b border-palette-gold/20 py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          
+          <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Left Side: Emblem Logo -->
+            <div class="lg:col-span-3 flex justify-center items-center">
+              <div class="relative w-full max-w-[240px] flex items-center justify-center p-2">
+                <div class="absolute w-48 h-48 bg-palette-gold/15 rounded-full blur-2xl pointer-events-none"></div>
+                <img 
+                  src="logo.png" 
+                  alt="Your Dream Our Mission Logo" 
+                  class="relative z-10 w-full h-auto object-contain mix-blend-multiply transition duration-500 hover:scale-105"
+                />
+              </div>
+            </div>
 
-    </section>
+            <!-- Middle: Mission Statement (Right of logo) -->
+            <div class="lg:col-span-5 space-y-5">
+              <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="home-mission-tag">
+                Our Mission &bull; Nuestra Misión
+              </span>
+              <h1 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug text-palette-black">
+                Your Dream, <span class="font-moontime lowercase text-3xl sm:text-5xl text-palette-gold block">Our Mission, PLLC</span>
+              </h1>
+              <p class="text-sm sm:text-base text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4" data-i18n="home-mission-text">
+                “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
+              </p>
+              <div class="pt-2 flex flex-wrap gap-3">
+                <button onclick="switchPage('appointment')" class="px-6 py-3 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
+                  Schedule Consultation
+                </button>
+                <button onclick="switchPage('services')" class="px-6 py-3 text-xs uppercase tracking-widest font-bold font-cinzel border border-palette-gold text-palette-black hover:bg-palette-gold/15 transition rounded-sm" data-i18n="home-cta-services">
+                  Our Services &rarr;
+                </button>
+              </div>
+            </div>
 
-    <!-- ==================== SERVICES SECTION (FAMILY, HUMANITARIAN, REMOVAL DEFENSE) ==================== -->
-    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span data-i18n="srv-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Legal Services</span>
-        <h2 data-i18n="srv-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">How We Can Assist You</h2>
-        <p data-i18n="srv-desc" class="text-sm text-palette-charcoalLight mt-3">
-          Strategic representation focused on safeguarding your status, uniting your loved ones, and protecting your legal rights.
-        </p>
-      </div>
+            <!-- Top Right: Joint Picture of Attorneys (Partners.jpg) -->
+            <div class="lg:col-span-4 flex justify-center">
+              <div class="relative w-full max-w-sm rounded-sm border-2 border-palette-gold/40 p-2 bg-white/70 shadow-lg">
+                <div class="overflow-hidden rounded-sm aspect-[3/4]">
+                  <img 
+                    src="Partners.jpg" 
+                    alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez" 
+                    class="w-full h-full object-cover object-top hover:scale-105 transition duration-700 ease-out"
+                  />
+                </div>
+                <div class="text-center pt-2 pb-1">
+                  <p class="font-cinzel text-xs font-bold text-palette-black">Yovana Lopez Medina &amp; Justina E. Gonzalez</p>
+                  <p class="text-[11px] font-moontime text-palette-gold text-base">Attorneys at Law</p>
+                </div>
+              </div>
+            </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Service 1: Family-Based Immigration -->
-        <div class="p-8 bg-palette-champagne/60 hover:bg-palette-champagne rounded-sm border border-palette-goldSoft/50 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-palette-goldDark font-bold tracking-wider mb-2">01</div>
-            <h3 data-i18n="s1-title" class="font-cinzel text-xl font-bold text-palette-black mb-3">Family-Based Immigration</h3>
-            <p data-i18n="s1-desc" class="text-sm text-palette-charcoalLight leading-relaxed">
-              Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-palette-goldSoft/30 text-xs font-semibold uppercase tracking-wider text-palette-goldDark">
-            <span data-i18n="s1-sub">Uniting Loved Ones &rarr;</span>
           </div>
         </div>
+      </section>
 
-        <!-- Service 2: Humanitarian Visas -->
-        <div class="p-8 bg-palette-champagne/60 hover:bg-palette-champagne rounded-sm border border-palette-goldSoft/50 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-palette-goldDark font-bold tracking-wider mb-2">02</div>
-            <h3 data-i18n="s2-title" class="font-cinzel text-xl font-bold text-palette-black mb-3">Humanitarian Visas</h3>
-            <p data-i18n="s2-desc" class="text-sm text-palette-charcoalLight leading-relaxed">
-              Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).
-            </p>
-          </div>
-          <div class="pt-4 border-t border-palette-goldSoft/30 text-xs font-semibold uppercase tracking-wider text-palette-goldDark">
-            <span data-i18n="s2-sub">Protection & Relief &rarr;</span>
-          </div>
-        </div>
-
-        <!-- Service 3: Removal Defense -->
-        <div class="p-8 bg-palette-champagne/60 hover:bg-palette-champagne rounded-sm border border-palette-goldSoft/50 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-palette-goldDark font-bold tracking-wider mb-2">03</div>
-            <h3 data-i18n="s3-title" class="font-cinzel text-xl font-bold text-palette-black mb-3">Removal Defense</h3>
-            <p data-i18n="s3-desc" class="text-sm text-palette-charcoalLight leading-relaxed">
-              Vigorous advocacy before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court representation.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-palette-goldSoft/30 text-xs font-semibold uppercase tracking-wider text-palette-goldDark">
-            <span data-i18n="s3-sub">Deportation Defense &rarr;</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== LOCATION & CONTACT INFO ==================== -->
-    <section id="location" class="py-20 bg-palette-goldSoft/10 border-t border-palette-goldSoft/30">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="mb-12">
-          <span data-i18n="loc-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Visit Our Office</span>
-          <h2 data-i18n="loc-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">Office Location & Hours</h2>
+      <!-- Office Location & Hours Prominently on Home Page -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-10 text-center md:text-left">
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="loc-badge">Oklahoma City Office</span>
+          <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black" data-i18n="loc-title">Location &amp; Hours of Operation</h2>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-5 space-y-6">
-            <div class="bg-palette-champagne p-8 rounded-sm border border-palette-goldSoft/40 space-y-5 shadow-sm">
-              <h3 data-i18n="loc-card-title" class="font-cinzel text-base font-bold text-palette-black">Office & Contact Details</h3>
+            <div class="bg-white/80 p-8 rounded-sm border border-palette-gold/40 space-y-5 shadow-sm">
+              <h3 class="font-cinzel text-lg font-bold text-palette-black border-b border-palette-gold/20 pb-2" data-i18n="loc-card-title">Office &amp; Contact Details</h3>
               
               <!-- Physical Address -->
               <div class="space-y-1 text-xs text-palette-charcoalDark">
-                <div class="font-bold uppercase tracking-wider text-palette-goldDark" data-i18n="loc-physical-hdr">Physical Office Address</div>
-                <div class="font-medium text-palette-black text-sm">8801 S. Olie Ave, Building 5</div>
+                <div class="font-bold uppercase tracking-wider text-palette-gold font-cinzel" data-i18n="loc-physical-hdr">Physical Office Address</div>
+                <div class="font-semibold text-palette-black text-sm">8801 S. Olie Ave, Building 5</div>
                 <div>Oklahoma City, OK 73139</div>
               </div>
 
               <!-- Mailing Address -->
-              <div class="space-y-1 text-xs text-palette-charcoalDark pt-3 border-t border-palette-goldSoft/30">
-                <div class="font-bold uppercase tracking-wider text-palette-goldDark" data-i18n="loc-mailing-hdr">Mailing Address</div>
+              <div class="space-y-1 text-xs text-palette-charcoalDark pt-3 border-t border-palette-gold/20">
+                <div class="font-bold uppercase tracking-wider text-palette-gold font-cinzel" data-i18n="loc-mailing-hdr">Mailing Address</div>
                 <div class="font-medium text-palette-black">9201 S Pennsylvania Ave, PO Box # 890550</div>
                 <div>Oklahoma City, OK 73189</div>
               </div>
 
-              <!-- Direct Phone -->
-              <div class="pt-3 border-t border-palette-goldSoft/30 space-y-2 text-sm text-palette-charcoalDark">
-                <div><strong data-i18n="loc-phone">Office Phone:</strong> <a href="tel:4052520507" class="hover:text-palette-goldDark transition font-semibold text-palette-black">(405) 252-0507</a></div>
+              <!-- Phone -->
+              <div class="pt-3 border-t border-palette-gold/20 text-sm">
+                <strong data-i18n="loc-phone" class="text-palette-charcoalDark">Office Phone:</strong> 
+                <a href="tel:4052520507" class="hover:text-palette-gold transition font-bold text-palette-black ml-1">(405) 252-0507</a>
               </div>
 
-              <!-- Detailed Operating Hours -->
-              <div class="pt-3 border-t border-palette-goldSoft/30 text-xs text-palette-charcoalLight space-y-1">
-                <div class="font-semibold uppercase tracking-wider text-palette-black font-cinzel text-[11px]" data-i18n="loc-hours-title">Hours of Operation</div>
-                <div class="font-medium text-palette-black" data-i18n="loc-hours-mon-thu">Monday – Thursday:</div>
-                <div class="pl-2 text-palette-charcoalDark" data-i18n="loc-hours-mon-thu-times">8:00 AM – 12:00 PM &amp; 1:00 PM – 5:00 PM</div>
-                <div class="font-medium text-palette-black pt-1" data-i18n="loc-hours-fri">Friday:</div>
-                <div class="pl-2 text-palette-charcoalDark" data-i18n="loc-hours-fri-times">8:00 AM – 12:00 PM</div>
+              <!-- Operating Hours -->
+              <div class="pt-3 border-t border-palette-gold/20 text-xs text-palette-charcoalLight space-y-1">
+                <div class="font-bold uppercase tracking-wider text-palette-black font-cinzel" data-i18n="loc-hours-title">Hours of Operation</div>
+                <div class="font-semibold text-palette-black" data-i18n="loc-hours-mon-thu">Monday – Thursday:</div>
+                <div class="pl-2 text-palette-charcoalDark font-medium" data-i18n="loc-hours-mon-thu-times">8:00 AM – 12:00 PM &amp; 1:00 PM – 5:00 PM</div>
+                <div class="font-semibold text-palette-black pt-1" data-i18n="loc-hours-fri">Friday:</div>
+                <div class="pl-2 text-palette-charcoalDark font-medium" data-i18n="loc-hours-fri-times">8:00 AM – 12:00 PM</div>
                 <div class="pt-1 text-palette-charcoalLight italic" data-i18n="loc-hours-weekend">Saturday &amp; Sunday: Closed</div>
               </div>
             </div>
           </div>
 
-          <!-- Oklahoma City Map Location -->
-          <div class="lg:col-span-7 bg-palette-champagne rounded-sm border border-palette-goldSoft/40 overflow-hidden h-[440px] shadow-sm">
+          <div class="lg:col-span-7 bg-white rounded-sm border border-palette-gold/40 overflow-hidden h-[420px] shadow-sm">
             <iframe 
               src="https://maps.google.com/maps?q=8801+S+Olie+Ave,+Building+5,+Oklahoma+City,+OK+73139&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               class="w-full h-full border-0" 
@@ -277,124 +211,257 @@
             </iframe>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- ==================== APPOINTMENT REQUEST FORM ==================== -->
-    <section id="appointment" class="py-20 border-t border-palette-goldSoft/30">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-10">
-          <span data-i18n="form-badge" class="text-xs uppercase tracking-widest font-semibold text-palette-goldDark block mb-2">Consultation</span>
-          <h2 data-i18n="form-title" class="font-cinzel text-2xl sm:text-3xl font-bold text-palette-black">Request An Appointment</h2>
-          <p data-i18n="form-sub" class="text-sm text-palette-charcoalLight mt-2">Send us a message to schedule an initial consultation with our attorneys.</p>
+    <!-- ======================================================== -->
+    <!-- PAGE 2: OUR STORY -->
+    <!-- ======================================================== -->
+    <div id="page-story" class="page-view hidden py-16 max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">About Our Firm</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Our Story</h2>
+        <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="bg-white/80 p-8 sm:p-12 rounded-sm border border-palette-gold/40 shadow-sm space-y-6 text-sm sm:text-base leading-relaxed text-palette-charcoalDark">
+        <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-gold first-letter:mr-2 first-letter:float-left">
+          Your Dream, Our Mission, PLLC was founded on the fundamental belief that every individual and family striving for the American Dream deserves honest, relentless, and deeply personal legal advocacy.
+        </p>
+        <p>
+          Navigating the United States immigration system is one of the most high-stakes journeys an individual or family can undertake. With offices located in South Oklahoma City, our team is firmly rooted in the local community while championing clients across immigration courts and USCIS offices nationwide.
+        </p>
+        <p>
+          We know that behind every case file, USCIS petition, or court docket is a parent, a spouse, a dreamer, or an individual fighting for safety. We treat your story with the dignity, urgency, and precision it deserves.
+        </p>
+        <div class="pt-6 border-t border-palette-gold/30 text-center">
+          <p class="font-moontime text-3xl sm:text-4xl text-palette-gold">Your Dream, Our Mission</p>
+          <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-charcoalDark mt-1">Attorneys at Law</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 3: ATTORNEYS -->
+    <!-- ======================================================== -->
+    <div id="page-attorneys" class="page-view hidden py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Advocates For Justice</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Our Attorneys</h2>
+        <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto">
+          Dedicated, compassionate advocates fighting for your future, rights, and family reunification.
+        </p>
+        <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Attorney 1: Yovana Lopez Medina -->
+        <div class="bg-white/80 p-8 rounded-sm border border-palette-gold/40 shadow-sm space-y-4 hover:border-palette-gold transition">
+          <div>
+            <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
+            <p class="font-moontime text-2xl text-palette-gold">Attorney at Law</p>
+          </div>
+          <div class="text-xs text-palette-charcoalDark space-y-2 pt-3 border-t border-palette-gold/30 leading-relaxed">
+            <p><strong class="font-cinzel text-[11px] text-palette-black">Bar Admission:</strong> September 26, 2023</p>
+            <p><strong class="font-cinzel text-[11px] text-palette-black">Email:</strong> <a href="mailto:yovanalmedina@yourdreamourmission.com" class="text-palette-gold hover:underline">yovanalmedina@yourdreamourmission.com</a></p>
+            <p class="pt-2 text-palette-charcoalLight">
+              Committed to providing comprehensive immigration solutions, protecting immigrant rights, and guiding families with integrity and relentless dedication.
+            </p>
+          </div>
         </div>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-palette-champagne p-8 sm:p-12 border border-palette-goldSoft/40 rounded-sm shadow-sm">
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div>
-              <label data-i18n="f-name" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Full Name</label>
-              <input type="text" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black" />
-            </div>
-            <div>
-              <label data-i18n="f-email" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Email Address</label>
-              <input type="email" name="email" required placeholder="jane@example.com" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black" />
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div>
-              <label data-i18n="f-phone" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Phone Number</label>
-              <input type="tel" name="phone" placeholder="(405) 000-0000" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black" />
-            </div>
-            <div>
-              <label data-i18n="f-type" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Practice Area / Service</label>
-              <select name="service_interest" id="service-select" class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black">
-                <option value="family">Family-Based Immigration</option>
-                <option value="humanitarian">Humanitarian Visas (U/T/VAWA/Asylum)</option>
-                <option value="removal">Removal Defense (Immigration Court)</option>
-                <option value="general">General Immigration Inquiry</option>
-              </select>
-            </div>
-          </div>
-
+        <!-- Attorney 2: Justina E. Gonzalez -->
+        <div class="bg-white/80 p-8 rounded-sm border border-palette-gold/40 shadow-sm space-y-4 hover:border-palette-gold transition">
           <div>
-            <label data-i18n="f-msg" class="block text-xs uppercase tracking-wider font-semibold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Preferred Dates & Details</label>
-            <textarea name="message" rows="4" data-i18n-ph="f-msg-ph" placeholder="Please mention your preferred days/times and a brief summary of your legal needs..." class="w-full px-4 py-3 bg-palette-champagne/40 border border-palette-goldSoft/60 rounded-sm focus:outline-none focus:border-palette-goldDark text-sm text-palette-black"></textarea>
+            <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
+            <p class="font-moontime text-2xl text-palette-gold">Attorney at Law</p>
           </div>
-
-          <button type="submit" data-i18n="f-btn" class="w-full py-4 bg-palette-black text-palette-champagne text-xs uppercase tracking-widest font-semibold hover:bg-palette-goldDark transition rounded-sm shadow-md">
-            Send Appointment Request
-          </button>
-
-          <p data-i18n="f-disclaimer" class="text-[11px] text-center text-palette-charcoalLight leading-relaxed">
-            *Inquiries sent through this form are for appointment scheduling only and do not constitute an attorney-client relationship.
-          </p>
-        </form>
+          <div class="text-xs text-palette-charcoalDark space-y-2 pt-3 border-t border-palette-gold/30 leading-relaxed">
+            <p><strong class="font-cinzel text-[11px] text-palette-black">Bar Admission:</strong> Licensed Attorney</p>
+            <p><strong class="font-cinzel text-[11px] text-palette-black">Email:</strong> <a href="mailto:justinag@yourdreamourmission.com" class="text-palette-gold hover:underline">justinag@yourdreamourmission.com</a></p>
+            <p class="pt-2 text-palette-charcoalLight">
+              Passionate advocate defending clients in deportation proceedings and navigating intricate humanitarian claims with compassion and strategic vigor.
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 4: SERVICES (The 3 Core Pillars) -->
+    <!-- ======================================================== -->
+    <div id="page-services" class="page-view hidden py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Practice Areas</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Legal Services</h2>
+        <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto">
+          Focused representation designed to safeguard your legal status, reunite your loved ones, and defend your rights in court.
+        </p>
+        <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="p-8 bg-white/80 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">01</div>
+            <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Family-Based Immigration</h3>
+            <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.
+            </p>
+          </div>
+          <button onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            Inquire About Family Petitions &rarr;
+          </button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-8 bg-white/80 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">02</div>
+            <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Humanitarian Visas</h3>
+            <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).
+            </p>
+          </div>
+          <button onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            Explore Humanitarian Relief &rarr;
+          </button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-8 bg-white/80 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">03</div>
+            <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Removal Defense</h3>
+            <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              Vigorous representation before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court advocacy.
+            </p>
+          </div>
+          <button onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            Court Representation &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PAGE 5: REQUEST APPOINTMENT -->
+    <!-- ======================================================== -->
+    <div id="page-appointment" class="page-view hidden py-16 max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Contact Our Firm</span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Request An Appointment</h2>
+        <p class="text-sm text-palette-charcoalLight mt-2">
+          Send us a message to schedule your initial consultation with our attorneys.
+        </p>
+        <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+      </div>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6 bg-white p-8 sm:p-12 border border-palette-gold/40 rounded-sm shadow-md">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Full Name</label>
+            <input type="text" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Email Address</label>
+            <input type="email" name="email" required placeholder="jane@example.com" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Phone Number</label>
+            <input type="tel" name="phone" placeholder="(405) 000-0000" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Area of Practice</label>
+            <select name="service_interest" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black">
+              <option value="family">Family-Based Immigration</option>
+              <option value="humanitarian">Humanitarian Visas (U/T/VAWA/Asylum)</option>
+              <option value="removal">Removal Defense (Court)</option>
+              <option value="other">General Immigration Consultation</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Preferred Dates &amp; Summary of Need</label>
+          <textarea name="message" rows="4" placeholder="Please mention your preferred days/times and what immigration service you need..." class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-4 bg-palette-black text-palette-cream text-xs uppercase tracking-widest font-bold font-cinzel hover:bg-palette-gold transition rounded-sm shadow-md">
+          Send Appointment Request
+        </button>
+
+        <p class="text-[11px] text-center text-palette-charcoalLight leading-relaxed">
+          *Submitting this form does not establish an attorney-client relationship. All inquiries are strictly confidential.
+        </p>
+      </form>
+    </div>
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-palette-black text-palette-champagne/70 py-12 text-xs border-t border-palette-goldSoft/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-      <div class="flex items-center space-x-4">
-        <div class="bg-palette-champagne p-1 rounded-sm">
-          <img 
-            src="logo.png" 
-            alt="Your Dream Our Mission" 
-            class="h-9 w-auto object-contain mix-blend-multiply"
-          />
-        </div>
-        <div class="flex flex-col">
-          <span class="text-palette-champagne/90 font-cinzel text-[11px]">Your Dream, Our Mission Law Firm</span>
-          <span class="text-palette-champagne/50 text-[10px]">8801 S. Olie Ave, Bldg 5, Oklahoma City, OK 73139 &bull; (405) 252-0507</span>
-        </div>
+  <footer class="bg-palette-black text-palette-cream/80 py-12 text-xs border-t border-palette-gold/30 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+      <div>
+        <span class="font-cinzel text-sm font-bold tracking-wider text-white uppercase block">Your Dream Our Mission, PLLC</span>
+        <span class="text-palette-cream/60 text-[11px]">8801 S. Olie Ave, Building 5, Oklahoma City, OK 73139 &bull; (405) 252-0507</span>
+        <p class="text-palette-cream/40 text-[10px] mt-1">&copy; 2026 Your Dream Our Mission, PLLC. All rights reserved.</p>
       </div>
 
-      <div class="flex space-x-6 uppercase tracking-wider text-[10px]">
-        <a href="#location" data-i18n="nav-location" class="hover:text-palette-goldMed transition">Office & Map</a>
-        <a href="#attorneys" data-i18n="nav-attorneys" class="hover:text-palette-goldMed transition">Attorneys</a>
-        <a href="#services" data-i18n="nav-services" class="hover:text-palette-goldMed transition">Services</a>
-        <a href="#appointment" data-i18n="nav-cta" class="hover:text-palette-goldMed transition">Appointments</a>
+      <div class="flex flex-wrap justify-center gap-4 uppercase font-cinzel text-[11px]">
+        <button onclick="switchPage('home')" class="hover:text-palette-gold transition">Home</button>
+        <button onclick="switchPage('story')" class="hover:text-palette-gold transition">Our Story</button>
+        <button onclick="switchPage('attorneys')" class="hover:text-palette-gold transition">Attorneys</button>
+        <button onclick="switchPage('services')" class="hover:text-palette-gold transition">Services</button>
+        <button onclick="switchPage('appointment')" class="hover:text-palette-gold transition">Appointment</button>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== LANGUAGE SWITCHER SCRIPT ==================== -->
+  <!-- ==================== PAGE SWITCHER & TRANSLATION SCRIPT ==================== -->
   <script>
+    function switchPage(pageId) {
+      // Hide all page views
+      document.querySelectorAll('.page-view').forEach(view => {
+        view.classList.add('hidden');
+      });
+
+      // Show requested page view
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Reset button styles
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm';
+      });
+
+      // Highlight active button
+      const activeBtn = document.getElementById('btn-nav-' + pageId);
+      if (activeBtn) {
+        if (pageId === 'appointment') {
+          activeBtn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm';
+        } else {
+          activeBtn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm';
+        }
+      }
+    }
+
     let currentLang = 'en';
 
     const translations = {
       en: {
-        'nav-services': 'Services',
-        'nav-attorneys': 'Attorneys',
-        'nav-location': 'Office & Map',
-        'nav-cta': 'Request Appointment',
-        'hero-tag': 'Immigration Law Office',
-        'hero-h1-a': 'Guiding your journey with',
-        'hero-h1-b': 'dedicated legal counsel',
-        'hero-desc': 'Welcome to Your Dream, Our Mission. Schedule an in-person consultation at our South Oklahoma City office or a virtual appointment to discuss your immigration pathway.',
-        'hero-cta-primary': 'Request An Appointment',
-        'hero-cta-secondary': 'Find Our Office →',
-        'attorney-badge': 'Legal Team',
-        'attorney-title': 'Our Attorneys',
-        'attorney-desc': 'Dedicated, compassionate advocates fighting for your future and family reunification.',
-        'atty-role': 'Attorney at Law',
-        'atty-admitted': 'Admitted to Bar:',
-        'srv-badge': 'Legal Services',
-        'srv-title': 'How We Can Assist You',
-        'srv-desc': 'Strategic representation focused on safeguarding your status, uniting your loved ones, and protecting your legal rights.',
-        's1-title': 'Family-Based Immigration',
-        's1-desc': 'Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.',
-        's1-sub': 'Uniting Loved Ones →',
-        's2-title': 'Humanitarian Visas',
-        's2-desc': 'Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).',
-        's2-sub': 'Protection & Relief →',
-        's3-title': 'Removal Defense',
-        's3-desc': 'Vigorous advocacy before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court representation.',
-        's3-sub': 'Deportation Defense →',
-        'loc-badge': 'Visit Our Office',
-        'loc-title': 'Office Location & Hours',
+        'home-mission-tag': 'Our Mission',
+        'home-mission-text': '“At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”',
+        'home-cta-appt': 'Schedule Consultation',
+        'home-cta-services': 'Our Services →',
+        'loc-badge': 'Oklahoma City Office',
+        'loc-title': 'Location & Hours of Operation',
         'loc-card-title': 'Office & Contact Details',
         'loc-physical-hdr': 'Physical Office Address',
         'loc-mailing-hdr': 'Mailing Address',
@@ -404,50 +471,16 @@
         'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM & 1:00 PM – 5:00 PM',
         'loc-hours-fri': 'Friday:',
         'loc-hours-fri-times': '8:00 AM – 12:00 PM',
-        'loc-hours-weekend': 'Saturday & Sunday: Closed',
-        'form-badge': 'Consultation',
-        'form-title': 'Request An Appointment',
-        'form-sub': 'Send us a message to schedule an initial consultation with our attorneys.',
-        'f-name': 'Full Name',
-        'f-email': 'Email Address',
-        'f-phone': 'Phone Number',
-        'f-type': 'Practice Area / Service',
-        'f-msg': 'Preferred Dates & Details',
-        'f-msg-ph': 'Please mention your preferred days/times and a brief summary of your legal needs...',
-        'f-btn': 'Send Appointment Request',
-        'f-disclaimer': '*Inquiries sent through this form are for appointment scheduling only and do not constitute an attorney-client relationship.'
+        'loc-hours-weekend': 'Saturday & Sunday: Closed'
       },
       es: {
-        'nav-services': 'Servicios',
-        'nav-attorneys': 'Abogadas',
-        'nav-location': 'Ubicación y Horario',
-        'nav-cta': 'Solicitar Cita',
-        'hero-tag': 'Bufete de Inmigración',
-        'hero-h1-a': 'Guiando su camino con',
-        'hero-h1-b': 'asesoría legal dedicada',
-        'hero-desc': 'Bienvenido a Your Dream, Our Mission. Programe una consulta presencial en nuestra oficina en Oklahoma City o una consulta virtual.',
-        'hero-cta-primary': 'Solicitar Una Cita',
-        'hero-cta-secondary': 'Ver Nuestra Oficina →',
-        'attorney-badge': 'Equipo Legal',
-        'attorney-title': 'Nuestras Abogadas',
-        'attorney-desc': 'Defensoras dedicadas y compasivas comprometidas con su futuro y la reunificación familiar.',
-        'atty-role': 'Abogada de Inmigración',
-        'atty-admitted': 'Fecha de Admisión:',
-        'srv-badge': 'Servicios Legales',
-        'srv-title': 'En Qué Podemos Ayudarle',
-        'srv-desc': 'Representación estratégica enfocada en proteger su estatus, unir a su familia y defender sus derechos legales.',
-        's1-title': 'Inmigración Basada en Familia',
-        's1-desc': 'Uniendo familias a través de peticiones de familiares inmediatos, ajuste de estatus (residencia/green card), peticiones conyugales, visas de prometido (K-1), proceso consular y perdones (waivers).',
-        's1-sub': 'Reunificación Familiar →',
-        's2-title': 'Visas Humanitarias',
-        's2-desc': 'Protección legal para personas afectadas por violencia o persecución, incluyendo Visa U (víctimas de crímenes), Visa T (trata de personas), autopeticiones VAWA, Asilo y Estatus de Protección Temporal (TPS).',
-        's2-sub': 'Protección y Ayuda →',
-        's3-title': 'Defensa Contra la Deportación',
-        's3-desc': 'Representación rigurosa ante la Corte de Inmigración (EOIR). Defensa activa contra órdenes de expulsión, Cancelación de Deportación, audiencias de fianza, mociones de reapertura y apelaciones.',
-        's3-sub': 'Defensa en Corte →',
-        'loc-badge': 'Visite Nuestra Oficina',
-        'loc-title': 'Ubicación y Horarios',
-        'loc-card-title': 'Información y Contacto',
+        'home-mission-tag': 'Nuestra Misión',
+        'home-mission-text': '“En Your Dream, Our Mission, PLLC, nuestra misión es brindar una defensa compasiva e incansable al empoderar a nuestros clientes, proteger sus derechos y buscar todos los caminos viables para alcanzar sus sueños y construir un futuro seguro en los Estados Unidos.”',
+        'home-cta-appt': 'Agendar Consulta',
+        'home-cta-services': 'Nuestros Servicios →',
+        'loc-badge': 'Oficina en Oklahoma City',
+        'loc-title': 'Ubicación y Horario de Atención',
+        'loc-card-title': 'Información de Contacto',
         'loc-physical-hdr': 'Dirección Física de la Oficina',
         'loc-mailing-hdr': 'Dirección Postal (Mailing)',
         'loc-phone': 'Teléfono:',
@@ -456,18 +489,7 @@
         'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM y 1:00 PM – 5:00 PM',
         'loc-hours-fri': 'Viernes:',
         'loc-hours-fri-times': '8:00 AM – 12:00 PM',
-        'loc-hours-weekend': 'Sábado y Domingo: Cerrado',
-        'form-badge': 'Consulta',
-        'form-title': 'Solicitar Una Cita',
-        'form-sub': 'Envíenos un mensaje para coordinar su primera consulta con nuestras abogadas.',
-        'f-name': 'Nombre Completo',
-        'f-email': 'Correo Electrónico',
-        'f-phone': 'Teléfono',
-        'f-type': 'Área de Interés / Servicio',
-        'f-msg': 'Fechas de Preferencia y Detalles',
-        'f-msg-ph': 'Indique sus días u horas de preferencia y un breve resumen de su situación legal...',
-        'f-btn': 'Enviar Solicitud de Cita',
-        'f-disclaimer': '*El envío de este mensaje es únicamente para agendar citas y no constituye una relación abogado-cliente.'
+        'loc-hours-weekend': 'Sábado y Domingo: Cerrado'
       }
     };
 
@@ -480,24 +502,6 @@
         const key = el.getAttribute('data-i18n');
         if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
       });
-
-      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-        const key = el.getAttribute('data-i18n-ph');
-        if (translations[currentLang][key]) el.placeholder = translations[currentLang][key];
-      });
-
-      const select = document.getElementById('service-select');
-      if (currentLang === 'es') {
-        select.options[0].text = 'Inmigración Basada en Familia';
-        select.options[1].text = 'Visas Humanitarias (U/T/VAWA/Asilo)';
-        select.options[2].text = 'Defensa Contra la Deportación (Corte)';
-        select.options[3].text = 'Consulta General de Inmigración';
-      } else {
-        select.options[0].text = 'Family-Based Immigration';
-        select.options[1].text = 'Humanitarian Visas (U/T/VAWA/Asylum)';
-        select.options[2].text = 'Removal Defense (Immigration Court)';
-        select.options[3].text = 'General Immigration Inquiry';
-      }
     }
   </script>
 </body>
