@@ -61,7 +61,7 @@
         <span class="font-moontime text-xl sm:text-2xl text-palette-gold lowercase -mt-1 block">Tu Sueño, Nuestra Misión</span>
       </a>
 
-      <!-- Navigation Buttons in Requested Phase 1 Order -->
+      <!-- Navigation Buttons in Requested Order -->
       <nav class="flex flex-wrap items-center justify-center gap-2 text-xs font-cinzel font-bold">
         <button type="button" onclick="switchPage('home')" id="btn-nav-home" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm">
           Home
@@ -80,12 +80,13 @@
         </button>
       </nav>
 
-      <!-- Language & Quick Call -->
-      <div class="flex items-center space-x-3">
+      <!-- Language Switcher & Single-Line Phone -->
+      <div class="flex items-center space-x-3 whitespace-nowrap">
         <button type="button" id="lang-toggle" onclick="toggleLanguage()" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-palette-gold/50 bg-white/50 text-palette-charcoalDark hover:border-palette-gold transition">
           <span>🌐</span> <span id="lang-label">ESPAÑOL</span>
         </button>
-        <a href="tel:4052520507" class="hidden lg:inline-flex px-3.5 py-1.5 text-xs font-bold font-cinzel border border-palette-gold text-palette-gold hover:bg-palette-gold hover:text-white transition rounded-sm">
+        <!-- Top Right Phone: Guaranteed single line -->
+        <a href="tel:4052520507" class="inline-flex whitespace-nowrap px-3.5 py-1.5 text-xs font-bold font-cinzel border border-palette-gold text-palette-gold hover:bg-palette-gold hover:text-white transition rounded-sm">
           (405) 252-0507
         </a>
       </div>
@@ -98,58 +99,72 @@
     <!-- ======================================================== -->
     <div id="page-home" class="page-view block">
       
-      <!-- Hero: Logo on Left, Mission Center, Photo Top-Right -->
-      <section class="border-b border-palette-gold/20 py-12 lg:py-16">
+      <!-- Hero Section -->
+      <section class="border-b border-palette-gold/20 py-10 lg:py-14 bg-palette-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="grid lg:grid-cols-12 gap-8 items-center">
             
-            <!-- Left: Logo -->
-            <div class="lg:col-span-3 flex justify-center items-center">
-              <div class="relative w-full max-w-[240px] flex items-center justify-center p-2">
-                <div class="absolute w-48 h-48 bg-palette-gold/15 rounded-full blur-2xl pointer-events-none"></div>
+            <!-- Center Left: Enlarged Logo occupying full boxed area -->
+            <div class="lg:col-span-4 flex justify-center items-center">
+              <div class="relative w-full max-w-[320px] sm:max-w-[360px] flex items-center justify-center p-2">
+                <div class="absolute w-60 h-60 bg-palette-gold/15 rounded-full blur-2xl pointer-events-none"></div>
                 <img 
                   src="Logo V9.1 - Full Color.svg" 
                   alt="Your Dream Our Mission Logo" 
-                  class="relative z-10 w-full h-auto object-contain transition duration-500 hover:scale-105"
+                  class="relative z-10 w-full h-auto object-contain transition duration-500 hover:scale-105 drop-shadow-sm"
                   onerror="this.onerror=null; this.src='logo.png';"
                 />
               </div>
             </div>
 
-            <!-- Center: Mission -->
-            <div class="lg:col-span-5 space-y-5">
-              <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="home-mission-tag">
-                Our Mission &bull; Nuestra Misión
-              </span>
-              <h1 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug text-palette-black">
-                Your Dream, <span class="font-moontime lowercase text-3xl sm:text-5xl text-palette-gold block">Our Mission, PLLC</span>
-              </h1>
-              <p class="text-sm sm:text-base text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4" data-i18n="home-mission-text">
-                “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”[cite: 11]
-              </p>
-              <div class="pt-2 flex flex-wrap gap-3">
-                <button type="button" onclick="switchPage('appointment')" class="px-6 py-3 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
+            <!-- Center: Title One Line + Moontime Spanish Directly Under + Cleaned Mission -->
+            <div class="lg:col-span-4 space-y-3 text-center lg:text-left">
+              <div>
+                <span class="text-[11px] uppercase tracking-[0.2em] font-bold text-palette-gold block font-cinzel mb-1" data-i18n="home-mission-tag">
+                  Our Mission &bull; Nuestra Misión
+                </span>
+                <!-- One line English title -->
+                <h1 class="font-cinzel text-xl sm:text-2xl font-bold tracking-wide text-palette-black uppercase leading-tight whitespace-normal sm:whitespace-nowrap">
+                  YOUR DREAM, OUR MISSION, PLLC
+                </h1>
+                <!-- Spanish subtitle directly underneath in Moontime cursive -->
+                <p class="font-moontime text-2xl sm:text-3xl text-palette-gold lowercase -mt-0.5">
+                  tu sueño, nuestra misión
+                </p>
+              </div>
+
+              <!-- Cleaned Mission Statement (removed "", moved closer to title) -->
+              <blockquote class="text-sm sm:text-[15px] text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4 text-left" data-i18n="home-mission-text">
+                “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
+              </blockquote>
+
+              <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
+                <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
                   Schedule Consultation
                 </button>
-                <button type="button" onclick="switchPage('services')" class="px-6 py-3 text-xs uppercase tracking-widest font-bold font-cinzel border border-palette-gold text-palette-black hover:bg-palette-gold/15 transition rounded-sm" data-i18n="home-cta-services">
+                <button type="button" onclick="switchPage('services')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel border border-palette-gold text-palette-black hover:bg-palette-gold/15 transition rounded-sm" data-i18n="home-cta-services">
                   Our Services &rarr;
                 </button>
               </div>
             </div>
 
-            <!-- Top Right: Photo -->
+            <!-- Top Right: Extended Photo with Attorneys Standing on Right Side -->
             <div class="lg:col-span-4 flex justify-center">
-              <div class="relative w-full max-w-sm rounded-sm border-2 border-palette-gold/40 p-2 bg-white/70 shadow-lg">
-                <div class="overflow-hidden rounded-sm aspect-[3/4]">
+              <div class="relative w-full rounded-sm border-2 border-palette-gold/40 bg-white/70 shadow-lg overflow-hidden">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden">
                   <img 
                     src="Partners.jpg" 
                     alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez" 
-                    class="w-full h-full object-cover object-top hover:scale-105 transition duration-700 ease-out"
+                    class="w-full h-full object-cover object-right filter contrast-105"
                   />
+                  <!-- Subtle gradient extension toward the left -->
+                  <div class="absolute inset-0 bg-gradient-to-r from-palette-cream/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
-                <div class="text-center pt-2 pb-1">
-                  <p class="font-cinzel text-xs font-bold text-palette-black">Yovana Lopez Medina &amp; Justina E. Gonzalez</p>
-                  <p class="text-[11px] font-moontime text-palette-gold text-base">Attorneys at Law</p>
+                <div class="py-2.5 px-3 bg-white text-center border-t border-palette-gold/30">
+                  <p class="font-cinzel text-xs font-bold tracking-wider text-palette-black">
+                    Yovana Lopez Medina &amp; Justina E. Gonzalez
+                  </p>
+                  <p class="font-moontime text-base text-palette-gold">Attorneys at Law</p>
                 </div>
               </div>
             </div>
@@ -158,7 +173,7 @@
         </div>
       </section>
 
-      <!-- Office Location & Hours -->
+      <!-- Office Location & Hours of Operation -->
       <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="mb-10 text-center md:text-left">
           <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="loc-badge">Oklahoma City Office</span>
@@ -167,38 +182,72 @@
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-5 space-y-6">
-            <div class="bg-white/80 p-8 rounded-sm border border-palette-gold/40 space-y-5 shadow-sm">
-              <h3 class="font-cinzel text-lg font-bold text-palette-black border-b border-palette-gold/20 pb-2" data-i18n="loc-card-title">Office &amp; Contact Details</h3>
+            <div class="bg-white/90 p-8 rounded-sm border border-palette-gold/40 space-y-5 shadow-sm">
+              <h3 class="font-cinzel text-base font-bold text-palette-black border-b border-palette-gold/20 pb-2 uppercase tracking-wider" data-i18n="loc-card-title">
+                Office &amp; Contact Details
+              </h3>
               
-              <div class="space-y-1 text-xs text-palette-charcoalDark">
-                <div class="font-bold uppercase tracking-wider text-palette-gold font-cinzel" data-i18n="loc-physical-hdr">Physical Office Address</div>
-                <div class="font-semibold text-palette-black text-sm">8801 S. Olie Ave, Building 5</div>
-                <div>Oklahoma City, OK 73139</div>
+              <!-- Physical Office Address -->
+              <div class="space-y-1">
+                <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-physical-hdr">
+                  Physical Office Address
+                </div>
+                <div class="font-sans text-sm text-palette-charcoalDark leading-relaxed">
+                  8801 S. Olie Ave, Building 5<br />
+                  Oklahoma City, OK 73139
+                </div>
               </div>
 
-              <div class="space-y-1 text-xs text-palette-charcoalDark pt-3 border-t border-palette-gold/20">
-                <div class="font-bold uppercase tracking-wider text-palette-gold font-cinzel" data-i18n="loc-mailing-hdr">Mailing Address</div>
-                <div class="font-medium text-palette-black">9201 S Pennsylvania Ave, PO Box # 890550</div>
-                <div>Oklahoma City, OK 73189</div>
+              <!-- Mailing Address -->
+              <div class="space-y-1 pt-3 border-t border-palette-gold/20">
+                <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-mailing-hdr">
+                  Mailing Address
+                </div>
+                <div class="font-sans text-sm text-palette-charcoalDark leading-relaxed">
+                  9201 S Pennsylvania Ave, PO Box #890550<br />
+                  Oklahoma City, OK 73189
+                </div>
               </div>
 
-              <div class="pt-3 border-t border-palette-gold/20 text-sm">
-                <strong data-i18n="loc-phone" class="text-palette-charcoalDark">Office Phone:</strong> 
-                <a href="tel:4052520507" class="hover:text-palette-gold transition font-bold text-palette-black ml-1">(405) 252-0507</a>
+              <!-- Phone & Email (Uniform Font & Size) -->
+              <div class="pt-3 border-t border-palette-gold/20 space-y-2">
+                <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold">
+                  Communication
+                </div>
+                <div class="font-sans text-sm text-palette-charcoalDark flex items-center space-x-2">
+                  <span class="font-semibold text-palette-black" data-i18n="loc-phone">Office Phone:</span>
+                  <a href="tel:4052520507" class="hover:text-palette-gold transition font-medium text-palette-black">(405) 252-0507</a>
+                </div>
+                <div class="font-sans text-sm text-palette-charcoalDark flex items-center space-x-2">
+                  <span class="font-semibold text-palette-black">Office Email:</span>
+                  <a href="mailto:yovanalmedina@yourdreamourmission.com" class="hover:text-palette-gold transition font-medium text-palette-black">yovanalmedina@yourdreamourmission.com</a>
+                </div>
               </div>
 
-              <div class="pt-3 border-t border-palette-gold/20 text-xs text-palette-charcoalLight space-y-1">
-                <div class="font-bold uppercase tracking-wider text-palette-black font-cinzel" data-i18n="loc-hours-title">Hours of Operation</div>
-                <div class="font-semibold text-palette-black" data-i18n="loc-hours-mon-thu">Monday – Thursday:</div>
-                <div class="pl-2 text-palette-charcoalDark font-medium" data-i18n="loc-hours-mon-thu-times">8:00 AM – 12:00 PM &amp; 1:00 PM – 5:00 PM</div>
-                <div class="font-semibold text-palette-black pt-1" data-i18n="loc-hours-fri">Friday:</div>
-                <div class="pl-2 text-palette-charcoalDark font-medium" data-i18n="loc-hours-fri-times">8:00 AM – 12:00 PM</div>
-                <div class="pt-1 text-palette-charcoalLight italic" data-i18n="loc-hours-weekend">Saturday &amp; Sunday: Closed</div>
+              <!-- Hours of Operation (Uniform Font & Size) -->
+              <div class="pt-3 border-t border-palette-gold/20 space-y-2">
+                <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-hours-title">
+                  Hours of Operation
+                </div>
+                <div class="font-sans text-sm text-palette-charcoalDark space-y-1 leading-relaxed">
+                  <div>
+                    <span class="font-semibold text-palette-black" data-i18n="loc-hours-mon-thu">Monday - Thursday:</span><br />
+                    <span class="pl-2" data-i18n="loc-hours-mon-thu-times">8:00 AM - 12:00 PM &amp; 1:00 PM - 5:00 PM</span>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-palette-black" data-i18n="loc-hours-fri">Friday:</span><br />
+                    <span class="pl-2" data-i18n="loc-hours-fri-times">8:00 AM - 12:00 PM</span>
+                  </div>
+                  <div class="italic text-palette-charcoalLight pt-1" data-i18n="loc-hours-weekend">
+                    Saturday &amp; Sunday: Closed
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
-          <div class="lg:col-span-7 bg-white rounded-sm border border-palette-gold/40 overflow-hidden h-[420px] shadow-sm">
+          <div class="lg:col-span-7 bg-white rounded-sm border border-palette-gold/40 overflow-hidden h-[460px] shadow-sm">
             <iframe 
               src="https://maps.google.com/maps?q=8801+S+Olie+Ave,+Building+5,+Oklahoma+City,+OK+73139&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               class="w-full h-full border-0" 
@@ -427,14 +476,12 @@
   <!-- ==================== SCRIPT ==================== -->
   <script>
     function switchPage(pageId) {
-      // 1. Hide all page views
       const views = document.querySelectorAll('.page-view');
       views.forEach(view => {
         view.classList.add('hidden');
         view.classList.remove('block');
       });
 
-      // 2. Unhide target page view
       const targetPage = document.getElementById('page-' + pageId);
       if (targetPage) {
         targetPage.classList.remove('hidden');
@@ -442,13 +489,11 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // 3. Reset button classes
       const buttons = document.querySelectorAll('.nav-btn');
       buttons.forEach(btn => {
         btn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm';
       });
 
-      // 4. Highlight active button
       const activeBtn = document.getElementById('btn-nav-' + pageId);
       if (activeBtn) {
         if (pageId === 'appointment') {
@@ -474,10 +519,10 @@
         'loc-mailing-hdr': 'Mailing Address',
         'loc-phone': 'Office Phone:',
         'loc-hours-title': 'Hours of Operation',
-        'loc-hours-mon-thu': 'Monday – Thursday:',
-        'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM & 1:00 PM – 5:00 PM',
+        'loc-hours-mon-thu': 'Monday - Thursday:',
+        'loc-hours-mon-thu-times': '8:00 AM - 12:00 PM & 1:00 PM - 5:00 PM',
         'loc-hours-fri': 'Friday:',
-        'loc-hours-fri-times': '8:00 AM – 12:00 PM',
+        'loc-hours-fri-times': '8:00 AM - 12:00 PM',
         'loc-hours-weekend': 'Saturday & Sunday: Closed'
       },
       es: {
@@ -493,9 +538,9 @@
         'loc-phone': 'Teléfono:',
         'loc-hours-title': 'Horario de Atención',
         'loc-hours-mon-thu': 'Lunes a Jueves:',
-        'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM y 1:00 PM – 5:00 PM',
+        'loc-hours-mon-thu-times': '8:00 AM - 12:00 PM y 1:00 PM - 5:00 PM',
         'loc-hours-fri': 'Viernes:',
-        'loc-hours-fri-times': '8:00 AM – 12:00 PM',
+        'loc-hours-fri-times': '8:00 AM - 12:00 PM',
         'loc-hours-weekend': 'Sábado y Domingo: Cerrado'
       }
     };
