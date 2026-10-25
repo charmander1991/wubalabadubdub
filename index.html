@@ -23,6 +23,10 @@
     .font-moontime {
       font-family: 'Moontime', 'Great Vibes', cursive;
     }
+    .hero-portrait {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 100%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 100%);
+    }
   </style>
 
   <script>
@@ -53,29 +57,29 @@
 
   <!-- ==================== HEADER ==================== -->
   <header class="sticky top-0 z-50 bg-palette-cream/95 backdrop-blur-md border-b border-palette-gold/30 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col xl:flex-row items-center justify-between gap-2">
       
       <!-- Brand Title -->
-      <a href="javascript:void(0)" onclick="switchPage('home')" class="text-center md:text-left">
-        <span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-palette-black block">Your Dream Our Mission</span>
-        <span class="font-moontime text-lg sm:text-xl text-palette-gold lowercase -mt-1 block">Tu Sueño, Nuestra Misión</span>
+      <a href="javascript:void(0)" onclick="switchPage('home')" class="text-center xl:text-left shrink-0">
+        <span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-palette-black block uppercase whitespace-nowrap">Your Dream Our Mission</span>
+        <span class="font-moontime text-lg sm:text-xl text-palette-gold lowercase -mt-1 block whitespace-nowrap">Tu Sueño, Nuestra Misión</span>
       </a>
 
       <!-- Navigation Buttons in Requested Order -->
       <nav class="flex flex-wrap items-center justify-center gap-2 text-xs font-cinzel font-bold">
-        <button type="button" onclick="switchPage('home')" id="btn-nav-home" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm">
+        <button type="button" onclick="switchPage('home')" id="btn-nav-home" class="nav-btn px-3 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm">
           Home
         </button>
-        <button type="button" onclick="switchPage('story')" id="btn-nav-story" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+        <button type="button" onclick="switchPage('story')" id="btn-nav-story" class="nav-btn px-3 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
           Our Story
         </button>
-        <button type="button" onclick="switchPage('attorneys')" id="btn-nav-attorneys" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+        <button type="button" onclick="switchPage('attorneys')" id="btn-nav-attorneys" class="nav-btn px-3 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
           Attorneys
         </button>
-        <button type="button" onclick="switchPage('services')" id="btn-nav-services" class="nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
+        <button type="button" onclick="switchPage('services')" id="btn-nav-services" class="nav-btn px-3 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm">
           Services
         </button>
-        <button type="button" onclick="switchPage('appointment')" id="btn-nav-appointment" class="nav-btn px-4 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm">
+        <button type="button" onclick="switchPage('appointment')" id="btn-nav-appointment" class="nav-btn px-3 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm">
           Request Appointment
         </button>
       </nav>
@@ -98,74 +102,54 @@
     <!-- ======================================================== -->
     <div id="page-home" class="page-view block">
       
-      <!-- HERO SECTION: Extended Picture Banner Layout (Ref: Corazon image) -->
       <section class="relative border-b border-palette-gold/30 bg-palette-cream overflow-hidden">
-        
-        <!-- Large Extended Photo Banner spanning behind on large screens -->
-        <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-center">
-          
-          <!-- Background image extended all the way across, pinned to right side -->
-          <div class="absolute inset-0 z-0">
-            <img 
-              src="Partners.jpg" 
-              alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez" 
-              class="w-full h-full object-cover object-[78%_center] lg:object-[85%_top]"
-            />
-            <!-- Gradient masks to ensure the text & logo on the left are completely legible -->
-            <div class="absolute inset-0 bg-gradient-to-r from-palette-cream via-palette-cream/95 to-transparent hidden lg:block" style="width: 62%;"></div>
-            <div class="absolute inset-0 bg-palette-cream/90 lg:hidden"></div>
-          </div>
+        <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+          <img
+            src="Partners.jpg"
+            alt=""
+            class="w-full h-full object-cover object-[center_top] scale-105 blur-[2px]"
+          />
+          <div class="absolute inset-0 bg-palette-cream/95 lg:hidden"></div>
+          <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-palette-cream via-palette-cream/90 to-transparent"></div>
+        </div>
 
-          <!-- Hero Content (Logo + Title + Mission Statement) -->
-          <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16 w-full">
+        <img
+          src="Partners.jpg"
+          alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
+          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none"
+        />
+
+        <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-center">
+          <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
-              
-              <!-- Left: Enlarged Logo (PDF Page 2 Box Fix) -->
               <div class="lg:col-span-4 flex justify-center lg:justify-start">
-                <div class="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] p-2">
-                  <img 
-                    src="Logo V9.1 - Full Color.svg" 
-                    alt="Your Dream Our Mission Logo" 
+                <div class="w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[400px] p-1">
+                  <img
+                    src="Logo V9.1 - Full Color.svg"
+                    alt="Your Dream Our Mission Logo"
                     class="w-full h-auto object-contain drop-shadow-md hover:scale-105 transition duration-500"
                     onerror="this.onerror=null; this.src='logo.png';"
                   />
                 </div>
               </div>
 
-              <!-- Center/Left: One-line title + Moontime Spanish under + Mission statement -->
-              <div class="lg:col-span-5 space-y-4 text-center lg:text-left bg-white/60 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none p-6 lg:p-0 rounded-sm border border-palette-gold/20 lg:border-0 shadow-sm lg:shadow-none">
+              <div class="lg:col-span-4 xl:col-span-5 space-y-5 text-center lg:text-left bg-white/60 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none p-6 lg:p-0 rounded-sm border border-palette-gold/20 lg:border-0 shadow-sm lg:shadow-none">
                 <div>
-                  <span class="text-[11px] uppercase tracking-[0.25em] font-bold text-palette-gold block font-cinzel mb-1" data-i18n="home-mission-tag">
+                  <span class="text-sm sm:text-base uppercase tracking-[0.2em] font-bold text-palette-gold block font-cinzel mb-3">
                     Our Mission &bull; Nuestra Misión
                   </span>
-                  
-                  <!-- PDF Page 2: ONE LINE English title -->
-                  <h1 class="font-cinzel text-xl sm:text-2xl lg:text-[26px] font-bold tracking-wide text-palette-black uppercase leading-tight whitespace-normal sm:whitespace-nowrap">
-                    YOUR DREAM, OUR MISSION, PLLC
-                  </h1>
-                  
-                  <!-- PDF Page 2: Spanish directly under in Moontime cursive -->
-                  <p class="font-moontime text-2xl sm:text-3xl text-palette-gold lowercase mt-0.5">
-                    tu sueño, nuestra misión
-                  </p>
+                  <blockquote class="text-sm sm:text-base text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4 text-left" data-i18n="home-mission-text">
+                    “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
+                  </blockquote>
                 </div>
 
-                <!-- PDF Page 3: Clean mission statement (Cite:11 artifact removed, closer to header) -->
-                <blockquote class="text-sm sm:text-[15px] text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4 text-left" data-i18n="home-mission-text">
-                  “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
-                </blockquote>
-
-                <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
+                <div class="pt-1 flex justify-center lg:justify-start">
                   <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
                     Schedule Consultation
                   </button>
-                  <button type="button" onclick="switchPage('services')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel border border-palette-gold text-palette-black hover:bg-palette-gold/15 transition rounded-sm" data-i18n="home-cta-services">
-                    Our Services &rarr;
-                  </button>
                 </div>
 
-                <!-- Attorney caption visible directly in banner -->
-                <div class="pt-2 text-left">
+                <div class="pt-1 text-center lg:text-left">
                   <p class="font-cinzel text-[11px] font-bold tracking-wider text-palette-black">
                     YOVANA LOPEZ MEDINA &amp; JUSTINA E. GONZALEZ
                   </p>
@@ -173,11 +157,17 @@
                 </div>
               </div>
 
-              <!-- Right spacer so attorneys remain visible in the extended photograph -->
-              <div class="lg:col-span-3 hidden lg:block"></div>
-
+              <div class="lg:col-span-4 xl:col-span-3 hidden lg:block"></div>
             </div>
           </div>
+        </div>
+
+        <div class="relative z-10 lg:hidden">
+          <img
+            src="Partners.jpg"
+            alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
+            class="w-full max-h-[600px] object-cover object-center border-t border-palette-gold/20"
+          />
         </div>
       </section>
 
@@ -195,57 +185,49 @@
                 Office &amp; Contact Details
               </h3>
               
-              <!-- Physical Office Address -->
               <div class="space-y-1">
                 <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-physical-hdr">
                   Physical Office Address
                 </div>
-                <div class="font-sans text-sm text-palette-charcoalDark leading-relaxed">
+                <div class="font-sans text-sm font-normal text-palette-charcoalDark leading-relaxed">
                   8801 S. Olie Ave, Building 5<br />
                   Oklahoma City, OK 73139
                 </div>
               </div>
 
-              <!-- Mailing Address -->
               <div class="space-y-1 pt-3 border-t border-palette-gold/20">
                 <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-mailing-hdr">
                   Mailing Address
                 </div>
-                <div class="font-sans text-sm text-palette-charcoalDark leading-relaxed">
+                <div class="font-sans text-sm font-normal text-palette-charcoalDark leading-relaxed">
                   9201 S Pennsylvania Ave, PO Box #890550<br />
                   Oklahoma City, OK 73189
                 </div>
               </div>
 
-              <!-- Phone & Email (Same font and size per PDF Page 1) -->
               <div class="pt-3 border-t border-palette-gold/20 space-y-2">
-                <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold">
-                  Communication
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                  <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-phone">Office Phone:</span>
+                  <a href="tel:4052520507" class="font-sans text-sm font-normal text-palette-charcoalDark hover:text-palette-gold transition">(405) 252-0507</a>
                 </div>
-                <div class="font-sans text-sm text-palette-charcoalDark flex items-center space-x-2">
-                  <span class="font-semibold text-palette-black" data-i18n="loc-phone">Office Phone:</span>
-                  <a href="tel:4052520507" class="hover:text-palette-gold transition font-medium text-palette-black">(405) 252-0507</a>
-                </div>
-                <!-- PDF Page 1: Line added for office email -->
-                <div class="font-sans text-sm text-palette-charcoalDark flex items-center space-x-2">
-                  <span class="font-semibold text-palette-black">Office Email:</span>
-                  <a href="mailto:contact@yourdreamourmission.com" class="hover:text-palette-gold transition font-medium text-palette-black">contact@yourdreamourmission.com</a>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                  <span class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-email">Office Email:</span>
+                  <a href="mailto:contact@yourdreamourmission.com" class="font-sans text-sm font-normal text-palette-charcoalDark hover:text-palette-gold transition break-all">contact@yourdreamourmission.com</a>
                 </div>
               </div>
 
-              <!-- Hours of Operation (Same font and size per PDF Page 1) -->
               <div class="pt-3 border-t border-palette-gold/20 space-y-2">
                 <div class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="loc-hours-title">
                   Hours of Operation
                 </div>
-                <div class="font-sans text-sm text-palette-charcoalDark space-y-1.5 leading-relaxed">
+                <div class="font-sans text-sm font-normal text-palette-charcoalDark space-y-1.5 leading-relaxed">
                   <div>
-                    <span class="font-semibold text-palette-black" data-i18n="loc-hours-mon-thu">Monday - Thursday:</span><br />
-                    <span class="pl-2">8:00 AM - 12:00 PM &amp; 1:00 PM - 5:00 PM</span>
+                    <span class="font-sans text-sm font-normal text-palette-charcoalDark" data-i18n="loc-hours-mon-thu">Monday - Thursday:</span><br />
+                    <span class="pl-2" data-i18n="loc-hours-mon-thu-times">8:00 AM - 12:00 PM &amp; 1:00 PM - 5:00 PM</span>
                   </div>
                   <div>
-                    <span class="font-semibold text-palette-black" data-i18n="loc-hours-fri">Friday:</span><br />
-                    <span class="pl-2">8:00 AM - 12:00 PM</span>
+                    <span class="font-sans text-sm font-normal text-palette-charcoalDark" data-i18n="loc-hours-fri">Friday:</span><br />
+                    <span class="pl-2" data-i18n="loc-hours-fri-times">8:00 AM - 12:00 PM</span>
                   </div>
                   <div class="italic text-palette-charcoalLight pt-1" data-i18n="loc-hours-weekend">
                     Saturday &amp; Sunday: Closed
@@ -497,15 +479,15 @@
 
       const buttons = document.querySelectorAll('.nav-btn');
       buttons.forEach(btn => {
-        btn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm';
+        btn.className = 'nav-btn px-3 py-2 rounded-sm border border-palette-gold/40 hover:border-palette-gold bg-white/70 hover:bg-palette-gold/10 text-palette-black tracking-widest uppercase transition shadow-sm';
       });
 
       const activeBtn = document.getElementById('btn-nav-' + pageId);
       if (activeBtn) {
         if (pageId === 'appointment') {
-          activeBtn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm';
+          activeBtn.className = 'nav-btn px-3 py-2 rounded-sm border border-palette-black bg-palette-black text-palette-cream hover:bg-palette-gold hover:border-palette-gold tracking-widest uppercase transition shadow-sm';
         } else {
-          activeBtn.className = 'nav-btn px-4 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm';
+          activeBtn.className = 'nav-btn px-3 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm';
         }
       }
     }
@@ -514,16 +496,15 @@
 
     const translations = {
       en: {
-        'home-mission-tag': 'Our Mission',
         'home-mission-text': '“At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”',
         'home-cta-appt': 'Schedule Consultation',
-        'home-cta-services': 'Our Services →',
         'loc-badge': 'Oklahoma City Office',
         'loc-title': 'Location & Hours of Operation',
         'loc-card-title': 'Office & Contact Details',
         'loc-physical-hdr': 'Physical Office Address',
         'loc-mailing-hdr': 'Mailing Address',
         'loc-phone': 'Office Phone:',
+        'loc-email': 'Office Email:',
         'loc-hours-title': 'Hours of Operation',
         'loc-hours-mon-thu': 'Monday - Thursday:',
         'loc-hours-mon-thu-times': '8:00 AM - 12:00 PM & 1:00 PM - 5:00 PM',
@@ -532,16 +513,15 @@
         'loc-hours-weekend': 'Saturday & Sunday: Closed'
       },
       es: {
-        'home-mission-tag': 'Nuestra Misión',
         'home-mission-text': '“En Your Dream, Our Mission, PLLC, nuestra misión es brindar una defensa compasiva e incansable al empoderar a nuestros clientes, proteger sus derechos y buscar todos los caminos viables para alcanzar sus sueños y construir un futuro seguro en los Estados Unidos.”',
         'home-cta-appt': 'Agendar Consulta',
-        'home-cta-services': 'Nuestros Servicios →',
         'loc-badge': 'Oficina en Oklahoma City',
         'loc-title': 'Ubicación y Horario de Atención',
         'loc-card-title': 'Información de Contacto',
         'loc-physical-hdr': 'Dirección Física de la Oficina',
         'loc-mailing-hdr': 'Dirección Postal (Mailing)',
         'loc-phone': 'Teléfono:',
+        'loc-email': 'Correo de la Oficina:',
         'loc-hours-title': 'Horario de Atención',
         'loc-hours-mon-thu': 'Lunes a Jueves:',
         'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM y 1:00 PM – 5:00 PM',
