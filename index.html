@@ -107,7 +107,7 @@
           <img
             src="Partners.jpg"
             alt=""
-            class="w-full h-full object-cover object-[center_top] scale-105 blur-[2px]"
+            class="w-full h-full object-cover object-[center_top] scale-105 blur-[2px] grayscale"
           />
           <div class="absolute inset-0 bg-palette-cream/95 lg:hidden"></div>
           <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-palette-cream via-palette-cream/90 to-transparent"></div>
@@ -116,7 +116,7 @@
         <img
           src="Partners.jpg"
           alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
-          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none"
+          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none grayscale contrast-[1.20] brightness-[1.02]"
         />
 
         <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-center">
@@ -134,7 +134,9 @@
               </div>
 
               <div class="lg:col-span-4 xl:col-span-5 space-y-5 text-center lg:text-left bg-white/60 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none p-6 lg:p-0 rounded-sm border border-palette-gold/20 lg:border-0 shadow-sm lg:shadow-none">
-                <p class="font-cinzel text-2xl sm:text-3xl font-bold uppercase tracking-wider text-palette-black text-center lg:text-left">Attorneys at Law</p>
+                <div class="w-full max-w-sm sm:max-w-md h-20 sm:h-24 mx-auto lg:mx-0 overflow-hidden">
+                  <img src="Attorneys at Law- Partial Logo.svg" alt="Attorneys at Law" class="w-full h-full object-cover" />
+                </div>
 
                 <div>
                   <span class="text-sm sm:text-base uppercase tracking-[0.2em] font-bold text-palette-gold block font-cinzel mb-3">
@@ -147,7 +149,7 @@
 
                 <div class="pt-1 flex justify-center lg:justify-start">
                   <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
-                    Schedule Appointment
+                    Request Appointment
                   </button>
                 </div>
 
@@ -168,52 +170,59 @@
           <img
             src="Partners.jpg"
             alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
-            class="w-full max-h-[600px] object-cover object-center border-t border-palette-gold/20"
+            class="w-full max-h-[600px] object-cover object-center border-t border-palette-gold/20 grayscale contrast-[1.20] brightness-[1.02]"
           />
         </div>
       </section>
 
-      <section class="bg-palette-goldHover text-palette-cream border-y border-palette-gold/60" aria-labelledby="core-values-title">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <section class="relative overflow-hidden bg-palette-goldHover text-white border-y border-palette-gold/60" aria-labelledby="core-values-title">
+        <video id="values-video" class="absolute inset-0 z-0 w-full h-full object-cover opacity-[0.12] mix-blend-multiply pointer-events-none" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+          <source src="monarch-background.mp4" type="video/mp4" />
+        </video>
+        <button type="button" id="values-motion-toggle" aria-controls="values-video" class="absolute bottom-4 right-4 z-20 min-h-[44px] px-3 py-2 border border-palette-cream/30 bg-palette-goldHover/80 text-white text-[11px] font-sans hover:bg-palette-goldHover transition rounded-sm">Pause background</button>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div class="text-center mb-10">
-            <h2 id="core-values-title" class="font-cinzel text-2xl sm:text-3xl font-bold" data-i18n="values-title">Our Core Values</h2>
-            <div class="w-16 h-0.5 bg-palette-cream/60 mx-auto mt-4"></div>
+            <div class="inline-block">
+              <h2 id="core-values-title" class="font-cinzel text-2xl sm:text-3xl font-bold" data-i18n="values-title">Our Core Values</h2>
+              <div class="w-full h-0.5 bg-palette-cream/60 mx-auto mt-4"></div>
+            </div>
           </div>
 
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-compassion-title">Compassion</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-compassion-text">We lead with compassion, treating every client and family with dignity, respect, and understanding.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-compassion-text">We lead with compassion, treating every client and family with dignity, respect, and understanding.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-service-title">Service</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-service-text">We are committed to serving our clients with dedication, responsiveness, and genuine care.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-service-text">We are committed to serving our clients with dedication, responsiveness, and genuine care.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-empathy-title">Empathy</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-empathy-text">We listen, understand, and recognize the unique circumstances and challenges each client faces.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-empathy-text">We listen, understand, and recognize the unique circumstances and challenges each client faces.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-knowledge-title">Knowledge</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-knowledge-text">We bring experience, insight, and professionalism to provide thoughtful and effective immigration advocacy.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-knowledge-text">We bring experience, insight, and professionalism to provide thoughtful and effective immigration advocacy.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-transparency-title">Transparency</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-transparency-text">We communicate openly and honestly, ensuring our clients understand their options, expectations, and the path forward.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-transparency-text">We communicate openly and honestly, ensuring our clients understand their options, expectations, and the path forward.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-courage-title">Courage</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-courage-text">We approach every case with conviction and determination, standing up for our clients and advocating fearlessly for their rights.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-courage-text">We approach every case with conviction and determination, standing up for our clients and advocating fearlessly for their rights.</p>
             </article>
 
             <article class="border-t border-palette-cream/30 pt-5 sm:col-span-2 lg:col-span-3 sm:w-full sm:max-w-2xl sm:mx-auto">
               <h3 class="font-cinzel text-lg font-bold" data-i18n="value-advocacy-title">Relentless Advocacy</h3>
-              <p class="mt-2 text-sm leading-relaxed text-palette-cream/90" data-i18n="value-advocacy-text">We pursue every lawful avenue available to our clients with persistence, dedication, and unwavering commitment.</p>
+              <p class="mt-2 text-sm leading-relaxed text-white" data-i18n="value-advocacy-text">We pursue every lawful avenue available to our clients with persistence, dedication, and unwavering commitment.</p>
             </article>
           </div>
         </div>
@@ -312,16 +321,15 @@
 
         <div class="bg-white/90 p-8 sm:p-12 rounded-sm border border-palette-gold/40 shadow-sm space-y-6 text-sm sm:text-base leading-relaxed text-palette-charcoalDark">
           <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-gold first-letter:mr-2 first-letter:float-left">
-            Your Dream, Our Mission, PLLC was founded on the fundamental belief that every individual and family striving for the American Dream deserves honest, relentless, and deeply personal legal advocacy.
+            The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
           </p>
           <p>
-            Navigating the United States immigration system is one of the most high-stakes journeys an individual or family can undertake. With offices located in South Oklahoma City, our team is firmly rooted in the local community while championing clients across immigration courts and USCIS offices nationwide.
+            Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
           </p>
           <p>
-            We know that behind every case file, USCIS petition, or court docket is a parent, a spouse, a dreamer, or an individual fighting for safety. We treat your story with the dignity, urgency, and precision it deserves.
+            Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.
           </p>
           <div class="pt-6 border-t border-palette-gold/30 text-center">
-            <p class="font-moontime text-3xl sm:text-4xl text-palette-gold">Your Dream, Our Mission</p>
             <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-charcoalDark mt-1">Attorneys at Law</p>
           </div>
         </div>
@@ -499,6 +507,10 @@
         <p class="text-palette-cream/40 text-[10px] mt-1">&copy; 2026 Your Dream Our Mission, PLLC. All rights reserved.</p>
       </div>
 
+      <div class="flex justify-center items-center">
+        <img src="okc chamber.png" alt="South OKC Chamber member" class="h-24 w-auto object-contain" loading="lazy" />
+      </div>
+
       <div class="flex flex-wrap justify-center gap-4 uppercase font-cinzel text-[11px]">
         <button type="button" onclick="switchPage('home')" class="hover:text-palette-gold transition">Home</button>
         <button type="button" onclick="switchPage('story')" class="hover:text-palette-gold transition">Our Story</button>
@@ -550,7 +562,7 @@
         'nav-services': 'Services',
         'nav-appointment': 'Request Appointment',
         'home-mission-text': '“At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”',
-        'home-cta-appt': 'Schedule Appointment',
+        'home-cta-appt': 'Request Appointment',
         'values-title': 'Our Core Values',
         'value-compassion-title': 'Compassion',
         'value-compassion-text': 'We lead with compassion, treating every client and family with dignity, respect, and understanding.',
@@ -587,7 +599,7 @@
         'nav-services': 'Servicios',
         'nav-appointment': 'Solicitar Cita',
         'home-mission-text': '“En Your Dream, Our Mission, PLLC, nuestra misión es brindar una defensa compasiva e incansable al empoderar a nuestros clientes, proteger sus derechos y buscar todos los caminos viables para alcanzar sus sueños y construir un futuro seguro en los Estados Unidos.”',
-        'home-cta-appt': 'Programar Cita',
+        'home-cta-appt': 'Solicitar Cita',
         'values-title': 'Nuestros Valores Fundamentales',
         'value-compassion-title': 'Compasión',
         'value-compassion-text': 'Actuamos con compasión, tratando a cada cliente y familia con dignidad, respeto y comprensión.',
@@ -619,6 +631,42 @@
       }
     };
 
+    const valuesVideo = document.getElementById('values-video');
+    const valuesMotionToggle = document.getElementById('values-motion-toggle');
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function updateVideoControl() {
+      const paused = valuesVideo.paused;
+      const label = currentLang === 'es'
+        ? (paused ? 'Reproducir fondo' : 'Pausar fondo')
+        : (paused ? 'Play background' : 'Pause background');
+      valuesMotionToggle.textContent = label;
+      valuesMotionToggle.setAttribute('aria-label', label);
+    }
+
+    valuesMotionToggle.addEventListener('click', () => {
+      if (valuesVideo.paused) {
+        valuesVideo.play().catch(() => {});
+      } else {
+        valuesVideo.pause();
+      }
+    });
+
+    valuesVideo.addEventListener('play', updateVideoControl);
+    valuesVideo.addEventListener('pause', updateVideoControl);
+
+    function syncVideoMotionPreference() {
+      if (motionPreference.matches) {
+        valuesVideo.pause();
+      } else {
+        valuesVideo.play().catch(() => {});
+      }
+      updateVideoControl();
+    }
+
+    syncVideoMotionPreference();
+    motionPreference.addEventListener('change', syncVideoMotionPreference);
+
     function toggleLanguage() {
       currentLang = currentLang === 'en' ? 'es' : 'en';
       document.getElementById('lang-label').textContent = currentLang === 'en' ? 'ESPAÑOL' : 'ENGLISH';
@@ -628,6 +676,8 @@
         const key = el.getAttribute('data-i18n');
         if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
       });
+
+      updateVideoControl();
     }
   </script>
 </body>
