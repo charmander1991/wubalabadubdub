@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     @font-face {
@@ -53,7 +54,7 @@
     }
   </script>
 </head>
-<body class="bg-palette-cream text-palette-black font-sans antialiased selection:bg-palette-gold selection:text-white">
+<body class="bg-palette-cream text-palette-black font-sans antialiased pb-16 selection:bg-palette-gold selection:text-white">
 
   <!-- ==================== HEADER ==================== -->
   <header class="sticky top-0 z-50 bg-palette-cream/95 backdrop-blur-md border-b border-palette-gold/30 shadow-sm">
@@ -107,7 +108,7 @@
           <img
             src="Partners.jpg"
             alt=""
-            class="w-full h-full object-cover object-[center_top] scale-105 blur-[2px] grayscale"
+            class="w-full h-full object-cover object-[center_top] scale-105 blur-[2px]"
           />
           <div class="absolute inset-0 bg-palette-cream/95 lg:hidden"></div>
           <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-palette-cream via-palette-cream/90 to-transparent"></div>
@@ -116,12 +117,12 @@
         <img
           src="Partners.jpg"
           alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
-          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none grayscale contrast-[1.20] brightness-[1.02]"
+          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none"
         />
 
-        <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-center">
+        <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-start">
           <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-10 w-full">
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
               <div class="lg:col-span-4 flex justify-center lg:justify-start">
                 <div class="w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[400px] p-1">
                   <img
@@ -133,31 +134,32 @@
                 </div>
               </div>
 
-              <div class="lg:col-span-4 xl:col-span-5 space-y-5 text-center lg:text-left bg-white/60 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none p-6 lg:p-0 rounded-sm border border-palette-gold/20 lg:border-0 shadow-sm lg:shadow-none">
-                <div class="w-full max-w-sm sm:max-w-md h-20 sm:h-24 mx-auto lg:mx-0 overflow-hidden">
-                  <img src="Attorneys at Law- Partial Logo.svg" alt="Attorneys at Law" class="w-full h-full object-cover" />
-                </div>
+              <div class="lg:col-span-4 xl:col-span-5 relative overflow-hidden bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 shadow-sm">
+                <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-[0.18] mix-blend-multiply pointer-events-none" />
+                <div class="relative z-10 p-6 sm:p-8 space-y-5 text-center lg:text-left">
+                  <h2 class="font-cinzel text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white text-center lg:text-left" data-i18n="attorneys-law-title">Attorneys at Law</h2>
 
-                <div>
-                  <span class="text-sm sm:text-base uppercase tracking-[0.2em] font-bold text-palette-gold block font-cinzel mb-3">
-                    Our Mission &bull; Nuestra Misión
-                  </span>
-                  <blockquote class="text-sm sm:text-base text-palette-charcoalDark leading-relaxed italic border-l-2 border-palette-gold pl-4 text-left" data-i18n="home-mission-text">
-                    “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
-                  </blockquote>
-                </div>
+                  <div>
+                    <span class="text-sm sm:text-base uppercase tracking-[0.2em] font-bold text-palette-cream block font-cinzel mb-3" data-i18n="home-mission-tag">
+                      Our Mission &bull; Nuestra Misión
+                    </span>
+                    <blockquote class="text-sm sm:text-base text-white leading-relaxed italic border-l-2 border-palette-cream pl-4 text-left" data-i18n="home-mission-text">
+                      “At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”
+                    </blockquote>
+                  </div>
 
-                <div class="pt-1 flex justify-center lg:justify-start">
-                  <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-black text-palette-cream hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="home-cta-appt">
-                    Request Appointment
-                  </button>
-                </div>
+                  <div class="text-center">
+                    <p class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-white">
+                      YOVANA LOPEZ MEDINA &amp; JUSTINA E. GONZALEZ
+                    </p>
+                    <p class="font-moontime text-lg sm:text-xl text-palette-cream mt-1" data-i18n="attorneys-law-title">Attorneys at Law</p>
+                  </div>
 
-                <div class="pt-1 text-center">
-                  <p class="font-cinzel text-sm sm:text-base font-bold tracking-wider text-palette-black">
-                    YOVANA LOPEZ MEDINA &amp; JUSTINA E. GONZALEZ
-                  </p>
-                  <p class="font-moontime text-lg sm:text-xl text-palette-gold mt-1">Attorneys at Law</p>
+                  <div class="pt-2 flex justify-center">
+                    <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-gold text-palette-black hover:bg-palette-goldSoft active:bg-palette-black active:text-palette-cream transition rounded-sm shadow-md" data-i18n="home-cta-appt">
+                      Request Appointment
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -170,7 +172,7 @@
           <img
             src="Partners.jpg"
             alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
-            class="w-full max-h-[600px] object-cover object-center border-t border-palette-gold/20 grayscale contrast-[1.20] brightness-[1.02]"
+            class="w-full max-h-[600px] object-cover object-center border-t border-palette-gold/20"
           />
         </div>
       </section>
@@ -314,23 +316,23 @@
     <div id="page-story" class="page-view hidden">
       <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">About Our Firm</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Our Story</h2>
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <div class="bg-white/90 p-8 sm:p-12 rounded-sm border border-palette-gold/40 shadow-sm space-y-6 text-sm sm:text-base leading-relaxed text-palette-charcoalDark">
-          <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-gold first-letter:mr-2 first-letter:float-left">
+          <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-gold first-letter:mr-2 first-letter:float-left" data-i18n="story-p1">
             The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
           </p>
-          <p>
+          <p data-i18n="story-p2">
             Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
           </p>
-          <p>
+          <p data-i18n="story-p3">
             Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.
           </p>
           <div class="pt-6 border-t border-palette-gold/30 text-center">
-            <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-charcoalDark mt-1">Attorneys at Law</p>
+            <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-charcoalDark mt-1" data-i18n="attorneys-law-title">Attorneys at Law</p>
           </div>
         </div>
       </section>
@@ -342,42 +344,54 @@
     <div id="page-attorneys" class="page-view hidden">
       <section class="py-16 max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Advocates For Justice</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Our Attorneys</h2>
-          <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto">
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="attorneys-badge">Advocates For Justice</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="attorneys-title">Our Attorneys</h2>
+          <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto" data-i18n="attorneys-intro">
             Dedicated, compassionate advocates fighting for your future, rights, and family reunification.
           </p>
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- Attorney 1 -->
-          <div class="bg-white/90 p-8 rounded-sm border border-palette-gold/40 shadow-sm space-y-4 hover:border-palette-gold transition">
-            <div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
-              <p class="font-moontime text-2xl text-palette-gold">Attorney at Law</p>
-            </div>
-            <div class="text-xs text-palette-charcoalDark space-y-2 pt-3 border-t border-palette-gold/30 leading-relaxed">
-              <p><strong class="font-cinzel text-[11px] text-palette-black">Email:</strong> <a href="mailto:yovanalmedina@yourdreamourmission.com" class="text-palette-gold hover:underline">yovanalmedina@yourdreamourmission.com</a></p>
-              <p class="pt-2 text-palette-charcoalLight">
-                Committed to providing comprehensive immigration solutions, protecting immigrant rights, and guiding families with integrity and relentless dedication.
+          <article class="bg-white/95 rounded-sm border border-palette-gold/40 shadow-sm overflow-hidden">
+            <img src="Headshot- Yovana.jpeg" alt="Yovana Lopez Medina" class="w-full h-72 object-cover object-[center_25%]" loading="lazy" />
+            <div class="p-6 sm:p-8 space-y-4">
+              <div>
+                <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
+                <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="attorney-title">Co-Founder and Managing Partner</p>
+              </div>
+              <p class="text-sm text-palette-charcoalLight">
+                <span class="font-cinzel text-[11px] font-bold uppercase tracking-wider text-palette-gold" data-i18n="fun-fact-label">Fun Fact:</span>
+                <span data-i18n="yovana-fun-fact"> If she had a different career, it would be a marine biologist.</span>
               </p>
+              <div class="pt-4 border-t border-palette-gold/20 text-sm space-y-2">
+                <p><strong class="font-cinzel text-[11px] text-palette-black" data-i18n="email-label">Email:</strong> <a href="mailto:yovanalmedina@yourdreamourmission.com" class="text-palette-gold hover:underline">yovanalmedina@yourdreamourmission.com</a></p>
+                <p class="text-palette-charcoalDark leading-relaxed" data-i18n="yovana-bio">
+                  Before co-founding the firm, Yovana gained valuable immigration law experience at Rivas &amp; Associates and Michael Brooks-Jimenez, P.C., where she provided compassionate, results-driven representation to immigrants navigating complex legal matters. Her practice is grounded in integrity, professionalism, empathy, and a strong commitment to advocating for her clients’ rights. Yovana earned her Juris Doctor from Oklahoma City University School of Law, where she demonstrated a strong commitment to leadership, advocacy, and diversity. She served as President of both the Immigration Law Student Association and the Hispanic Law Student Association, Chair of the Stony the Road Symposium, and a member of the Dean’s Diversity Council. She also served as an Admissions Ambassador, supporting prospective students pursuing legal education. Through her legal experience and leadership, Yovana brings a client centered approach to her practice and a deep commitment to serving immigrant communities.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Attorney 2 -->
-          <div class="bg-white/90 p-8 rounded-sm border border-palette-gold/40 shadow-sm space-y-4 hover:border-palette-gold transition">
-            <div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
-              <p class="font-moontime text-2xl text-palette-gold">Attorney at Law</p>
-            </div>
-            <div class="text-xs text-palette-charcoalDark space-y-2 pt-3 border-t border-palette-gold/30 leading-relaxed">
-              <p><strong class="font-cinzel text-[11px] text-palette-black">Email:</strong> <a href="mailto:justinag@yourdreamourmission.com" class="text-palette-gold hover:underline">justinag@yourdreamourmission.com</a></p>
-              <p class="pt-2 text-palette-charcoalLight">
-                Passionate advocate defending clients in deportation proceedings and navigating intricate humanitarian claims with compassion and strategic vigor.
+          <article class="bg-white/95 rounded-sm border border-palette-gold/40 shadow-sm overflow-hidden">
+            <img src="Headshot- Justina.jpg" alt="Justina E. Gonzalez" class="w-full h-72 object-cover object-[center_20%]" loading="lazy" />
+            <div class="p-6 sm:p-8 space-y-4">
+              <div>
+                <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
+                <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-gold" data-i18n="attorney-title">Co-Founder and Managing Partner</p>
+              </div>
+              <p class="text-sm text-palette-charcoalLight">
+                <span class="font-cinzel text-[11px] font-bold uppercase tracking-wider text-palette-gold" data-i18n="fun-fact-label">Fun Fact:</span>
+                <span data-i18n="justina-fun-fact"> Outside of work, she follows Formula 1 and enjoys reading comic books.</span>
               </p>
+              <div class="pt-4 border-t border-palette-gold/20 text-sm space-y-2">
+                <p><strong class="font-cinzel text-[11px] text-palette-black" data-i18n="email-label">Email:</strong> <a href="mailto:justinag@yourdreamourmission.com" class="text-palette-gold hover:underline">justinag@yourdreamourmission.com</a></p>
+                <p class="text-palette-charcoalDark leading-relaxed" data-i18n="justina-bio">
+                  Before co-founding the firm, Justina gained extensive experience handling complex immigration matters, including family-based petitions, naturalization, humanitarian relief, T and U visas, VAWA cases, waivers, deferred action, motions and appeals, and representation before USCIS and immigration courts. Justina is a first-generation college graduate from Madill, Oklahoma. She earned her bachelor’s degree in Energy Management and completed the Legal Assistant Education program at the University of Oklahoma before earning her Juris Doctor from Oklahoma City University, School of Law. She was admitted to the Oklahoma Bar in 2023. Beyond her legal practice, Justina is committed to serving individuals and families through advocacy and community engagement. She is currently pursuing a graduate degree in Public Health Administration and Policy through the OU Hudson College of Public Health and is a member of the 2026–2027 OKLEND class, further expanding her work in disability, leadership, and family-centered systems of support.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
     </div>
@@ -386,9 +400,9 @@
     <div id="page-services" class="page-view hidden">
       <section class="py-16 max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Practice Areas</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Legal Services</h2>
-          <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto">
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="services-badge">Practice Areas</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="services-title">Legal Services</h2>
+          <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto" data-i18n="services-intro">
             Focused representation designed to safeguard your legal status, reunite your loved ones, and defend your rights in court.
           </p>
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
@@ -398,12 +412,12 @@
           <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">01</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Family-Based Immigration</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-family-title">Family-Based Immigration</h3>
+              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-family-text">
                 Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-family-cta">
               Inquire About Family Petitions &rarr;
             </button>
           </div>
@@ -411,12 +425,12 @@
           <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">02</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Humanitarian Visas</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-humanitarian-title">Humanitarian Visas</h3>
+              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-humanitarian-text">
                 Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-humanitarian-cta">
               Explore Humanitarian Relief &rarr;
             </button>
           </div>
@@ -424,12 +438,12 @@
           <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">03</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3">Removal Defense</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed">
+              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-removal-title">Removal Defense</h3>
+              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-removal-text">
                 Vigorous representation before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court advocacy.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-removal-cta">
               Court Representation &rarr;
             </button>
           </div>
@@ -441,9 +455,9 @@
     <div id="page-appointment" class="page-view hidden">
       <section class="py-16 max-w-3xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-10">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel">Contact Our Firm</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2">Request An Appointment</h2>
-          <p class="text-sm text-palette-charcoalLight mt-2">
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="appointment-badge">Contact Our Firm</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="appointment-title">Request An Appointment</h2>
+          <p class="text-sm text-palette-charcoalLight mt-2" data-i18n="appointment-intro">
             Send us a message to schedule your initial consultation with our attorneys.
           </p>
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
@@ -456,41 +470,41 @@
 
           <div class="grid sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Full Name</label>
-              <input type="text" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
+              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]" data-i18n="form-name">Full Name</label>
+              <input type="text" name="name" required data-i18n-ph="form-name-ph" placeholder="Jane Doe" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Email Address</label>
-              <input type="email" name="email" required placeholder="jane@example.com" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
+              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]" data-i18n="form-email">Email Address</label>
+              <input type="email" name="email" required data-i18n-ph="form-email-ph" placeholder="jane@example.com" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
             </div>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Phone Number</label>
+              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]" data-i18n="form-phone">Phone Number</label>
               <input type="tel" name="phone" placeholder="(405) 000-0000" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black" />
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Area of Practice</label>
+              <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]" data-i18n="form-practice">Area of Practice</label>
               <select name="service_interest" class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black">
-                <option value="family">Family-Based Immigration</option>
-                <option value="humanitarian">Humanitarian Visas (U/T/VAWA/Asylum)</option>
-                <option value="removal">Removal Defense (Court)</option>
-                <option value="other">General Immigration Consultation</option>
+                <option value="family" data-i18n="service-family-title">Family-Based Immigration</option>
+                <option value="humanitarian" data-i18n="service-humanitarian-title">Humanitarian Visas (U/T/VAWA/Asylum)</option>
+                <option value="removal" data-i18n="service-removal-title">Removal Defense (Court)</option>
+                <option value="other" data-i18n="form-other">General Immigration Consultation</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]">Preferred Dates &amp; Summary of Need</label>
-            <textarea name="message" rows="4" placeholder="Please mention your preferred days/times and what immigration service you need..." class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black"></textarea>
+            <label class="block text-xs uppercase tracking-wider font-bold mb-2 text-palette-charcoalDark font-cinzel text-[11px]" data-i18n="form-message">Preferred Dates &amp; Summary of Need</label>
+            <textarea name="message" rows="4" data-i18n-ph="form-message-ph" placeholder="Please mention your preferred days/times and what immigration service you need..." class="w-full px-4 py-3 bg-palette-cream/40 border border-palette-gold/50 rounded-sm focus:outline-none focus:border-palette-gold text-sm text-palette-black"></textarea>
           </div>
 
-          <button type="submit" class="w-full py-4 bg-palette-black text-palette-cream text-xs uppercase tracking-widest font-bold font-cinzel hover:bg-palette-gold transition rounded-sm shadow-md">
+          <button type="submit" class="w-full py-4 bg-palette-black text-palette-cream text-xs uppercase tracking-widest font-bold font-cinzel hover:bg-palette-gold transition rounded-sm shadow-md" data-i18n="form-submit">
             Send Appointment Request
           </button>
 
-          <p class="text-[11px] text-center text-palette-charcoalLight leading-relaxed">
+          <p class="text-[11px] text-center text-palette-charcoalLight leading-relaxed" data-i18n="form-disclaimer">
             *Submitting this form does not establish an attorney-client relationship. All inquiries are strictly confidential.
           </p>
         </form>
@@ -500,26 +514,46 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-palette-black text-palette-cream/80 py-12 text-xs border-t border-palette-gold/30 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-      <div>
-        <span class="font-cinzel text-sm font-bold tracking-wider text-white uppercase block">Your Dream Our Mission, PLLC</span>
-        <span class="text-palette-cream/60 text-[11px]">8801 S. Olie Ave, Building 5, Oklahoma City, OK 73139 &bull; (405) 252-0507</span>
-        <p class="text-palette-cream/40 text-[10px] mt-1">&copy; 2026 Your Dream Our Mission, PLLC. All rights reserved.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="https://www.facebook.com/share/1Mt6AuKoHu/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 flex items-center justify-center rounded-full bg-palette-gold text-palette-black hover:bg-palette-black hover:text-palette-gold transition">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.tiktok.com/@your.dream.our.mis?_r=1&_t=ZP-9B4ayCYwvpH" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-10 h-10 flex items-center justify-center rounded-full bg-palette-gold text-palette-black hover:bg-palette-black hover:text-palette-gold transition">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/your-dream-our-mission-pllc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 flex items-center justify-center rounded-full bg-palette-gold text-palette-black hover:bg-palette-black hover:text-palette-gold transition">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
       </div>
 
-      <div class="flex justify-center items-center">
-        <img src="okc chamber.png" alt="South OKC Chamber member" class="h-24 w-auto object-contain" loading="lazy" />
-      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <div>
+          <span class="font-cinzel text-sm font-bold tracking-wider text-white uppercase block">Your Dream Our Mission, PLLC</span>
+          <span class="text-palette-cream/60 text-[11px]">8801 S. Olie Ave, Building 5, Oklahoma City, OK 73139 &bull; (405) 252-0507</span>
+          <p class="text-palette-cream/40 text-[10px] mt-1" data-i18n="footer-copyright">&copy; 2026 Your Dream Our Mission, PLLC. All rights reserved.</p>
+        </div>
 
-      <div class="flex flex-wrap justify-center gap-4 uppercase font-cinzel text-[11px]">
-        <button type="button" onclick="switchPage('home')" class="hover:text-palette-gold transition">Home</button>
-        <button type="button" onclick="switchPage('story')" class="hover:text-palette-gold transition">Our Story</button>
-        <button type="button" onclick="switchPage('attorneys')" class="hover:text-palette-gold transition">Attorneys</button>
-        <button type="button" onclick="switchPage('services')" class="hover:text-palette-gold transition">Services</button>
-        <button type="button" onclick="switchPage('appointment')" class="hover:text-palette-gold transition">Appointment</button>
+        <div class="flex justify-center items-center">
+          <img src="okc chamber.png" alt="South OKC Chamber member" class="h-24 w-auto object-contain" loading="lazy" />
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 uppercase font-cinzel text-[11px]">
+          <button type="button" onclick="switchPage('home')" class="hover:text-palette-gold transition" data-i18n="nav-home">Home</button>
+          <button type="button" onclick="switchPage('story')" class="hover:text-palette-gold transition" data-i18n="nav-story">Our Story</button>
+          <button type="button" onclick="switchPage('attorneys')" class="hover:text-palette-gold transition" data-i18n="nav-attorneys">Attorneys</button>
+          <button type="button" onclick="switchPage('services')" class="hover:text-palette-gold transition" data-i18n="nav-services">Services</button>
+          <button type="button" onclick="switchPage('appointment')" class="hover:text-palette-gold transition" data-i18n="footer-appointment">Appointment</button>
+        </div>
       </div>
     </div>
   </footer>
+
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-palette-black text-palette-cream/70 text-[10px] text-center py-2 px-4 border-t border-palette-gold/30">
+    <p data-i18n="legal-disclaimer">
+      Immigration options depend on the specific facts and circumstances of each case. Immigration laws, regulations, and government policies are subject to change. Information provided on this website is for general informational purposes only and does not constitute legal advice or create an attorney-client relationship.
+    </p>
+  </div>
 
   <!-- ==================== SCRIPT ==================== -->
   <script>
@@ -561,6 +595,8 @@
         'nav-attorneys': 'Attorneys',
         'nav-services': 'Services',
         'nav-appointment': 'Request Appointment',
+        'attorneys-law-title': 'Attorneys at Law',
+        'home-mission-tag': 'Our Mission',
         'home-mission-text': '“At Your Dream, Our Mission, PLLC, our mission is to provide compassionate and relentless advocacy by empowering our clients, protecting their rights, and pursuing every available path toward achieving their dreams and building a secure future in the United States.”',
         'home-cta-appt': 'Request Appointment',
         'values-title': 'Our Core Values',
@@ -590,7 +626,51 @@
         'loc-hours-mon-thu-times': '8:00 AM - 12:00 PM & 1:00 PM - 5:00 PM',
         'loc-hours-fri': 'Friday:',
         'loc-hours-fri-times': '8:00 AM - 12:00 PM',
-        'loc-hours-weekend': 'Saturday & Sunday: Closed'
+        'loc-hours-weekend': 'Saturday & Sunday: Closed',
+        'story-badge': 'About Our Firm',
+        'story-title': 'Our Story',
+        'story-p1': 'The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.',
+        'story-p2': 'Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.',
+        'story-p3': 'Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.',
+        'attorneys-badge': 'Advocates For Justice',
+        'attorneys-title': 'Our Attorneys',
+        'attorneys-intro': 'Dedicated, compassionate advocates fighting for your future, rights, and family reunification.',
+        'attorney-title': 'Co-Founder and Managing Partner',
+        'fun-fact-label': 'Fun Fact:',
+        'email-label': 'Email:',
+        'yovana-fun-fact': ' If she had a different career, it would be a marine biologist.',
+        'yovana-bio': 'Before co-founding the firm, Yovana gained valuable immigration law experience at Rivas & Associates and Michael Brooks-Jimenez, P.C., where she provided compassionate, results-driven representation to immigrants navigating complex legal matters. Her practice is grounded in integrity, professionalism, empathy, and a strong commitment to advocating for her clients’ rights. Yovana earned her Juris Doctor from Oklahoma City University School of Law, where she demonstrated a strong commitment to leadership, advocacy, and diversity. She served as President of both the Immigration Law Student Association and the Hispanic Law Student Association, Chair of the Stony the Road Symposium, and a member of the Dean’s Diversity Council. She also served as an Admissions Ambassador, supporting prospective students pursuing legal education. Through her legal experience and leadership, Yovana brings a client centered approach to her practice and a deep commitment to serving immigrant communities.',
+        'justina-fun-fact': ' Outside of work, she follows Formula 1 and enjoys reading comic books.',
+        'justina-bio': 'Before co-founding the firm, Justina gained extensive experience handling complex immigration matters, including family-based petitions, naturalization, humanitarian relief, T and U visas, VAWA cases, waivers, deferred action, motions and appeals, and representation before USCIS and immigration courts. Justina is a first-generation college graduate from Madill, Oklahoma. She earned her bachelor’s degree in Energy Management and completed the Legal Assistant Education program at the University of Oklahoma before earning her Juris Doctor from Oklahoma City University, School of Law. She was admitted to the Oklahoma Bar in 2023. Beyond her legal practice, Justina is committed to serving individuals and families through advocacy and community engagement. She is currently pursuing a graduate degree in Public Health Administration and Policy through the OU Hudson College of Public Health and is a member of the 2026–2027 OKLEND class, further expanding her work in disability, leadership, and family-centered systems of support.',
+        'services-badge': 'Practice Areas',
+        'services-title': 'Legal Services',
+        'services-intro': 'Focused representation designed to safeguard your legal status, reunite your loved ones, and defend your rights in court.',
+        'service-family-title': 'Family-Based Immigration',
+        'service-family-text': 'Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.',
+        'service-family-cta': 'Inquire About Family Petitions →',
+        'service-humanitarian-title': 'Humanitarian Visas',
+        'service-humanitarian-text': 'Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).',
+        'service-humanitarian-cta': 'Explore Humanitarian Relief →',
+        'service-removal-title': 'Removal Defense',
+        'service-removal-text': 'Vigorous representation before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court advocacy.',
+        'service-removal-cta': 'Court Representation →',
+        'appointment-badge': 'Contact Our Firm',
+        'appointment-title': 'Request An Appointment',
+        'appointment-intro': 'Send us a message to schedule your initial consultation with our attorneys.',
+        'form-name': 'Full Name',
+        'form-name-ph': 'Jane Doe',
+        'form-email': 'Email Address',
+        'form-email-ph': 'jane@example.com',
+        'form-phone': 'Phone Number',
+        'form-practice': 'Area of Practice',
+        'form-other': 'General Immigration Consultation',
+        'form-message': 'Preferred Dates & Summary of Need',
+        'form-message-ph': 'Please mention your preferred days/times and what immigration service you need...',
+        'form-submit': 'Send Appointment Request',
+        'form-disclaimer': '*Submitting this form does not establish an attorney-client relationship. All inquiries are strictly confidential.',
+        'footer-copyright': '© 2026 Your Dream Our Mission, PLLC. All rights reserved.',
+        'footer-appointment': 'Appointment',
+        'legal-disclaimer': 'Immigration options depend on the specific facts and circumstances of each case. Immigration laws, regulations, and government policies are subject to change. Information provided on this website is for general informational purposes only and does not constitute legal advice or create an attorney-client relationship.'
       },
       es: {
         'nav-home': 'Inicio',
@@ -598,6 +678,8 @@
         'nav-attorneys': 'Abogadas',
         'nav-services': 'Servicios',
         'nav-appointment': 'Solicitar Cita',
+        'attorneys-law-title': 'Abogadas',
+        'home-mission-tag': 'Nuestra Misión',
         'home-mission-text': '“En Your Dream, Our Mission, PLLC, nuestra misión es brindar una defensa compasiva e incansable al empoderar a nuestros clientes, proteger sus derechos y buscar todos los caminos viables para alcanzar sus sueños y construir un futuro seguro en los Estados Unidos.”',
         'home-cta-appt': 'Solicitar Cita',
         'values-title': 'Nuestros Valores Fundamentales',
@@ -627,7 +709,51 @@
         'loc-hours-mon-thu-times': '8:00 AM – 12:00 PM y 1:00 PM – 5:00 PM',
         'loc-hours-fri': 'Viernes:',
         'loc-hours-fri-times': '8:00 AM – 12:00 PM',
-        'loc-hours-weekend': 'Sábado y Domingo: Cerrado'
+        'loc-hours-weekend': 'Sábado y Domingo: Cerrado',
+        'story-badge': 'Sobre Nuestra Firma',
+        'story-title': 'Nuestra Historia',
+        'story-p1': 'La firma fue cofundada por Yovana Lopez Medina y Justina E. Gonzalez, y está arraigada en la experiencia personal y en una comprensión profunda del camino migratorio. La propia experiencia inmigrante de Yovana moldeó su comprensión del miedo, la incertidumbre y el valor que implica el proceso, mientras que la experiencia directa de Justina al presenciar los desafíos que enfrentó su familia le brinda una comprensión personal del estrés y del impacto de los asuntos migratorios.',
+        'story-p2': 'Juntas abordamos cada caso con empatía, dignidad y atención personal, defendiendo incansablemente a nuestros clientes y los sueños que están construyendo. Mediante honorarios transparentes, comunicación clara, representación personalizada y sistemas profesionales, buscamos hacer el proceso legal más comprensible y accesible mientras ofrecemos una defensa sólida y eficaz.',
+        'story-p3': 'Nuestro objetivo es ser más que una firma legal, ser un recurso confiable para la comunidad y una defensora dedicada de las personas inmigrantes, ayudando a individuos y familias a proteger sus derechos, permanecer juntos y construir un futuro seguro en los Estados Unidos.',
+        'attorneys-badge': 'Defensoras de la Justicia',
+        'attorneys-title': 'Nuestras Abogadas',
+        'attorneys-intro': 'Defensoras dedicadas y compasivas que luchan por su futuro, sus derechos y la reunificación familiar.',
+        'attorney-title': 'Cofundadora y Socia Administradora',
+        'fun-fact-label': 'Dato Curioso:',
+        'email-label': 'Correo:',
+        'yovana-fun-fact': ' Si hubiera elegido otra carrera, habría sido bióloga marina.',
+        'yovana-bio': 'Antes de cofundar la firma, Yovana obtuvo valiosa experiencia en derecho de inmigración en Rivas & Associates y Michael Brooks-Jimenez, P.C., donde brindó representación compasiva y orientada a resultados a inmigrantes que enfrentaban asuntos legales complejos. Su práctica se basa en la integridad, el profesionalismo, la empatía y un fuerte compromiso con la defensa de los derechos de sus clientes. Yovana obtuvo su título de Juris Doctor en la Oklahoma City University School of Law, donde demostró un sólido compromiso con el liderazgo, la defensa y la diversidad. Fue presidenta de la Immigration Law Student Association y de la Hispanic Law Student Association, presidenta del Stony the Road Symposium y miembro del Dean’s Diversity Council. También fue Admissions Ambassador, apoyando a estudiantes prospectivos que buscaban una educación legal. A través de su experiencia legal y su liderazgo, Yovana aporta un enfoque centrado en el cliente y un profundo compromiso con el servicio a las comunidades inmigrantes.',
+        'justina-fun-fact': ' Fuera del trabajo, sigue la Fórmula 1 y disfruta leer cómics.',
+        'justina-bio': 'Antes de cofundar la firma, Justina obtuvo amplia experiencia en asuntos migratorios complejos, incluyendo peticiones familiares, naturalización, alivio humanitario, visas T y U, casos de VAWA, exenciones, acción diferida, mociones y apelaciones, y representación ante USCIS y las cortes de inmigración. Justina es egresada universitaria de primera generación de Madill, Oklahoma. Obtuvo su licenciatura en Administración de Energía y completó el programa de Educación de Asistente Legal en la Universidad de Oklahoma antes de obtener su título de Juris Doctor en la Oklahoma City University, School of Law. Fue admitida en el Colegio de Abogados de Oklahoma en 2023. Más allá de su práctica legal, Justina está comprometida con servir a individuos y familias mediante la defensa y la participación comunitaria. Actualmente cursa una maestría en Administración y Políticas de Salud Pública en el OU Hudson College of Public Health y es miembro de la clase 2026–2027 de OKLEND, ampliando su trabajo en discapacidad, liderazgo y sistemas de apoyo centrados en la familia.',
+        'services-badge': 'Áreas de Práctica',
+        'services-title': 'Servicios Legales',
+        'services-intro': 'Representación enfocada en proteger su estatus legal, reunir a sus seres queridos y defender sus derechos en la corte.',
+        'service-family-title': 'Inmigración Familiar',
+        'service-family-text': 'Reunimos a las familias mediante peticiones de parientes cercanos, ajuste de estatus (tarjetas verdes), peticiones conyugales, visas de prometido (K-1), procesamiento consular y exenciones por presencia ilegal.',
+        'service-family-cta': 'Consultar sobre Peticiones Familiares →',
+        'service-humanitarian-title': 'Visas Humanitarias',
+        'service-humanitarian-text': 'Protección legal dedicada para personas que huyen de la violencia o la persecución, incluyendo visas U (víctimas de delitos calificados), visas T (trata de personas), autopeticiones VAWA, asilo y Estatus de Protección Temporal (TPS).',
+        'service-humanitarian-cta': 'Explorar Alivio Humanitario →',
+        'service-removal-title': 'Defensa contra la Deportación',
+        'service-removal-text': 'Representación vigorosa ante la Corte de Inmigración (EOIR). Defendemos contra la deportación mediante Cancelación de Deportación, audiencias de fianza, mociones para reabrir y defensa estratégica en la corte.',
+        'service-removal-cta': 'Representación en Corte →',
+        'appointment-badge': 'Contacte a Nuestra Firma',
+        'appointment-title': 'Solicitar Una Cita',
+        'appointment-intro': 'Envíenos un mensaje para programar su consulta inicial con nuestras abogadas.',
+        'form-name': 'Nombre Completo',
+        'form-name-ph': 'Jane Doe',
+        'form-email': 'Correo Electrónico',
+        'form-email-ph': 'jane@example.com',
+        'form-phone': 'Número de Teléfono',
+        'form-practice': 'Área de Práctica',
+        'form-other': 'Consulta General de Inmigración',
+        'form-message': 'Fechas Preferidas y Resumen de Necesidad',
+        'form-message-ph': 'Mencione sus días u horas preferidos y el servicio de inmigración que necesita...',
+        'form-submit': 'Enviar Solicitud de Cita',
+        'form-disclaimer': '*El envío de este formulario no establece una relación abogado-cliente. Todas las consultas son estrictamente confidenciales.',
+        'footer-copyright': '© 2026 Your Dream Our Mission, PLLC. Todos los derechos reservados.',
+        'footer-appointment': 'Cita',
+        'legal-disclaimer': 'Las opciones migratorias dependen de los hechos y circunstancias específicas de cada caso. Las leyes, regulaciones y políticas gubernamentales de inmigración están sujetas a cambios. La información proporcionada en este sitio web tiene fines informativos generales y no constituye asesoría legal ni crea una relación abogado-cliente.'
       }
     };
 
@@ -671,10 +797,18 @@
       currentLang = currentLang === 'en' ? 'es' : 'en';
       document.getElementById('lang-label').textContent = currentLang === 'en' ? 'ESPAÑOL' : 'ENGLISH';
       document.documentElement.lang = currentLang;
+      document.title = currentLang === 'es'
+        ? 'Your Dream Our Mission, PLLC | Abogadas de Inmigración'
+        : 'Your Dream Our Mission, PLLC | Attorneys at Law';
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
+      });
+
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.getAttribute('data-i18n-ph');
+        if (translations[currentLang][key]) el.placeholder = translations[currentLang][key];
       });
 
       updateVideoControl();
