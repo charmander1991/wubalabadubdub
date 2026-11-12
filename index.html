@@ -117,7 +117,7 @@
         <img
           src="Partners.jpg"
           alt="Attorneys Yovana Lopez Medina and Justina E. Gonzalez"
-          class="hero-portrait absolute inset-y-0 right-0 z-[1] hidden lg:block h-full w-auto max-w-none"
+          class="hero-portrait absolute top-0 right-0 z-[1] hidden lg:block h-[145%] w-auto max-w-none -translate-y-[28%]"
         />
 
         <div class="relative w-full min-h-[520px] lg:min-h-[560px] flex items-start">
@@ -135,7 +135,6 @@
               </div>
 
               <div class="lg:col-span-4 xl:col-span-5 relative overflow-hidden bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 shadow-sm">
-                <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-[0.18] mix-blend-multiply pointer-events-none" />
                 <div class="relative z-10 p-6 sm:p-8 space-y-5 text-center lg:text-left">
                   <h2 class="font-cinzel text-2xl sm:text-3xl font-bold uppercase tracking-wider text-white text-center lg:text-left" data-i18n="attorneys-law-title">Attorneys at Law</h2>
 
@@ -156,7 +155,7 @@
                   </div>
 
                   <div class="pt-2 flex justify-center">
-                    <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-palette-gold text-palette-black hover:bg-palette-goldSoft active:bg-palette-black active:text-palette-cream transition rounded-sm shadow-md" data-i18n="home-cta-appt">
+                    <button type="button" onclick="switchPage('appointment')" class="px-5 py-2.5 text-xs uppercase tracking-widest font-bold font-cinzel bg-white text-palette-black hover:bg-palette-goldSoft active:bg-palette-black active:text-palette-cream transition rounded-sm shadow-md" data-i18n="home-cta-appt">
                       Request Appointment
                     </button>
                   </div>
@@ -314,25 +313,46 @@
     <!-- TAB 2: OUR STORY -->
     <!-- ======================================================== -->
     <div id="page-story" class="page-view hidden">
-      <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6">
+      <section class="relative py-16 max-w-4xl mx-auto px-4 sm:px-6">
+        <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+          <symbol id="monarch-butterfly" viewBox="0 0 64 64">
+            <path d="M32 20c-5-9-14-13-21-11-6 2-7 12 0 20 4 5 10 8 15 8" fill="#D98C2B" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M32 20c5-9 14-13 21-11 6 2 7 12 0 20-4 5-10 8-15 8" fill="#D98C2B" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M32 36c-4 6-10 9-16 8-6-1-9-7-6-13 2-4 6-6 11-6" fill="#E0A24A" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M32 36c4 6 10 9 16 8 6-1 9-7 6-13-2-4-6-6-11-6" fill="#E0A24A" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
+            <ellipse cx="32" cy="34" rx="2.5" ry="14" fill="#2B2B2B"/>
+            <path d="M30 22c-2-5-5-8-8-9M34 22c2-5 5-8 8-9" stroke="#2B2B2B" stroke-width="1.5" stroke-linecap="round"/>
+          </symbol>
+        </svg>
+
+        <div class="pointer-events-none absolute inset-0 hidden md:block overflow-hidden" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="absolute top-2 right-0 w-12 h-12 opacity-90 rotate-12"><use href="#monarch-butterfly" /></svg>
+          <svg viewBox="0 0 64 64" class="absolute top-20 right-24 w-9 h-9 opacity-75 -rotate-12"><use href="#monarch-butterfly" /></svg>
+          <svg viewBox="0 0 64 64" class="absolute top-32 right-52 w-14 h-14 opacity-65 rotate-6"><use href="#monarch-butterfly" /></svg>
+        </div>
+
         <div class="text-center mb-12">
           <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
           <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
-        <div class="bg-white/90 p-8 sm:p-12 rounded-sm border border-palette-gold/40 shadow-sm space-y-6 text-sm sm:text-base leading-relaxed text-palette-charcoalDark">
-          <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-gold first-letter:mr-2 first-letter:float-left" data-i18n="story-p1">
-            The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
-          </p>
-          <p data-i18n="story-p2">
-            Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
-          </p>
-          <p data-i18n="story-p3">
-            Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.
-          </p>
-          <div class="pt-6 border-t border-palette-gold/30 text-center">
-            <p class="font-cinzel text-xs font-bold uppercase tracking-wider text-palette-charcoalDark mt-1" data-i18n="attorneys-law-title">Attorneys at Law</p>
+        <div class="relative overflow-hidden bg-palette-goldHover text-white p-8 sm:p-12 rounded-sm border border-palette-gold/60 shadow-sm text-sm sm:text-base leading-relaxed">
+          <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-35 mix-blend-multiply pointer-events-none" />
+          <div class="relative z-10 space-y-6">
+            <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-cream first-letter:mr-2 first-letter:float-left" data-i18n="story-p1">
+              The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
+            </p>
+            <p data-i18n="story-p2">
+              Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
+            </p>
+            <p data-i18n="story-p3">
+              Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.
+            </p>
+            <div class="pt-6 border-t border-palette-cream/30 text-center space-y-1">
+              <p class="font-cinzel text-base sm:text-lg font-bold tracking-wider text-white">YOVANA LOPEZ MEDINA &amp; JUSTINA E. GONZALEZ</p>
+              <p class="font-moontime text-xl sm:text-2xl text-palette-cream" data-i18n="attorneys-law-title">Attorneys at Law</p>
+            </div>
           </div>
         </div>
       </section>
@@ -354,7 +374,7 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <article class="bg-white/95 rounded-sm border border-palette-gold/40 shadow-sm overflow-hidden">
-            <img src="Headshot- Yovana.jpeg" alt="Yovana Lopez Medina" class="w-full h-72 object-cover object-[center_25%]" loading="lazy" />
+            <img src="Headshot- Yovana.jpeg" alt="Yovana Lopez Medina" class="w-full aspect-[4/5] object-cover object-top bg-palette-cream/70" loading="lazy" />
             <div class="p-6 sm:p-8 space-y-4">
               <div>
                 <h3 class="font-cinzel text-xl font-bold text-palette-black">Yovana Lopez Medina</h3>
@@ -374,7 +394,7 @@
           </article>
 
           <article class="bg-white/95 rounded-sm border border-palette-gold/40 shadow-sm overflow-hidden">
-            <img src="Headshot- Justina.jpg" alt="Justina E. Gonzalez" class="w-full h-72 object-cover object-[center_20%]" loading="lazy" />
+            <img src="Headshot- Justina.jpg" alt="Justina E. Gonzalez" class="w-full aspect-[4/5] object-cover object-top bg-palette-cream/70" loading="lazy" />
             <div class="p-6 sm:p-8 space-y-4">
               <div>
                 <h3 class="font-cinzel text-xl font-bold text-palette-black">Justina E. Gonzalez</h3>
@@ -414,24 +434,24 @@
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">01</div>
               <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-family-title">Family-Based Immigration</h3>
               <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-family-text">
-                Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.
+                Green cards, citizenship, and family reunification.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-family-cta">
-              Inquire About Family Petitions &rarr;
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-family-cta">
+              Inquire about Family-Based Immigration &nbsp;&rarr;
             </button>
           </div>
 
           <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">02</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-humanitarian-title">Humanitarian Visas</h3>
+              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-humanitarian-title">Humanitarian Immigration</h3>
               <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-humanitarian-text">
-                Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).
+                Asylum, U visas, VAWA, and T visas.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-humanitarian-cta">
-              Explore Humanitarian Relief &rarr;
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-humanitarian-cta">
+              Inquire about Humanitarian Visas &nbsp;&rarr;
             </button>
           </div>
 
@@ -440,11 +460,11 @@
               <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">03</div>
               <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-removal-title">Removal Defense</h3>
               <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-removal-text">
-                Vigorous representation before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court advocacy.
+                Representation for individuals facing deportation or removal proceedings.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-xs font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wider" data-i18n="service-removal-cta">
-              Court Representation &rarr;
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-removal-cta">
+              Inquire about Removal Defense &nbsp;&rarr;
             </button>
           </div>
         </div>
@@ -646,14 +666,14 @@
         'services-title': 'Legal Services',
         'services-intro': 'Focused representation designed to safeguard your legal status, reunite your loved ones, and defend your rights in court.',
         'service-family-title': 'Family-Based Immigration',
-        'service-family-text': 'Bringing families together through immediate relative petitions, adjustment of status (green cards), spousal petitions, fiancé visas (K-1), consular processing, and unlawful presence waivers.',
-        'service-family-cta': 'Inquire About Family Petitions →',
-        'service-humanitarian-title': 'Humanitarian Visas',
-        'service-humanitarian-text': 'Dedicated legal protection for individuals fleeing violence or persecution, including U Visas (victims of qualifying crimes), T Visas (trafficking), VAWA self-petitions, Asylum, and Temporary Protected Status (TPS).',
-        'service-humanitarian-cta': 'Explore Humanitarian Relief →',
+        'service-family-text': 'Green cards, citizenship, and family reunification.',
+        'service-family-cta': 'Inquire about Family-Based Immigration\u00A0→',
+        'service-humanitarian-title': 'Humanitarian Immigration',
+        'service-humanitarian-text': 'Asylum, U visas, VAWA, and T visas.',
+        'service-humanitarian-cta': 'Inquire about Humanitarian Visas\u00A0→',
         'service-removal-title': 'Removal Defense',
-        'service-removal-text': 'Vigorous representation before the Immigration Court (EOIR). Defending against deportation through Cancellation of Removal, bond hearings, motions to reopen, and strategic court advocacy.',
-        'service-removal-cta': 'Court Representation →',
+        'service-removal-text': 'Representation for individuals facing deportation or removal proceedings.',
+        'service-removal-cta': 'Inquire about Removal Defense\u00A0→',
         'appointment-badge': 'Contact Our Firm',
         'appointment-title': 'Request An Appointment',
         'appointment-intro': 'Send us a message to schedule your initial consultation with our attorneys.',
@@ -729,14 +749,14 @@
         'services-title': 'Servicios Legales',
         'services-intro': 'Representación enfocada en proteger su estatus legal, reunir a sus seres queridos y defender sus derechos en la corte.',
         'service-family-title': 'Inmigración Familiar',
-        'service-family-text': 'Reunimos a las familias mediante peticiones de parientes cercanos, ajuste de estatus (tarjetas verdes), peticiones conyugales, visas de prometido (K-1), procesamiento consular y exenciones por presencia ilegal.',
-        'service-family-cta': 'Consultar sobre Peticiones Familiares →',
-        'service-humanitarian-title': 'Visas Humanitarias',
-        'service-humanitarian-text': 'Protección legal dedicada para personas que huyen de la violencia o la persecución, incluyendo visas U (víctimas de delitos calificados), visas T (trata de personas), autopeticiones VAWA, asilo y Estatus de Protección Temporal (TPS).',
-        'service-humanitarian-cta': 'Explorar Alivio Humanitario →',
+        'service-family-text': 'Tarjetas verdes, ciudadanía y reunificación familiar.',
+        'service-family-cta': 'Consultar sobre Inmigración Familiar\u00A0→',
+        'service-humanitarian-title': 'Inmigración Humanitaria',
+        'service-humanitarian-text': 'Asilo, visas U, VAWA y visas T.',
+        'service-humanitarian-cta': 'Consultar sobre Visas Humanitarias\u00A0→',
         'service-removal-title': 'Defensa contra la Deportación',
-        'service-removal-text': 'Representación vigorosa ante la Corte de Inmigración (EOIR). Defendemos contra la deportación mediante Cancelación de Deportación, audiencias de fianza, mociones para reabrir y defensa estratégica en la corte.',
-        'service-removal-cta': 'Representación en Corte →',
+        'service-removal-text': 'Representación para personas que enfrentan deportación o procedimientos de remoción.',
+        'service-removal-cta': 'Consultar sobre Defensa contra la Deportación\u00A0→',
         'appointment-badge': 'Contacte a Nuestra Firma',
         'appointment-title': 'Solicitar Una Cita',
         'appointment-intro': 'Envíenos un mensaje para programar su consulta inicial con nuestras abogadas.',
