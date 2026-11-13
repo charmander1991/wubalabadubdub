@@ -314,40 +314,28 @@
     <!-- ======================================================== -->
     <div id="page-story" class="page-view hidden">
       <section class="relative py-16 max-w-4xl mx-auto px-4 sm:px-6">
-        <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
-          <symbol id="monarch-butterfly" viewBox="0 0 64 64">
-            <path d="M32 20c-5-9-14-13-21-11-6 2-7 12 0 20 4 5 10 8 15 8" fill="#D98C2B" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M32 20c5-9 14-13 21-11 6 2 7 12 0 20-4 5-10 8-15 8" fill="#D98C2B" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M32 36c-4 6-10 9-16 8-6-1-9-7-6-13 2-4 6-6 11-6" fill="#E0A24A" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M32 36c4 6 10 9 16 8 6-1 9-7 6-13-2-4-6-6-11-6" fill="#E0A24A" stroke="#2B2B2B" stroke-width="1.5" stroke-linejoin="round"/>
-            <ellipse cx="32" cy="34" rx="2.5" ry="14" fill="#2B2B2B"/>
-            <path d="M30 22c-2-5-5-8-8-9M34 22c2-5 5-8 8-9" stroke="#2B2B2B" stroke-width="1.5" stroke-linecap="round"/>
-          </symbol>
-        </svg>
-
-        <div class="pointer-events-none absolute inset-0 hidden md:block overflow-hidden" aria-hidden="true">
-          <svg viewBox="0 0 64 64" class="absolute top-2 right-0 w-12 h-12 opacity-90 rotate-12"><use href="#monarch-butterfly" /></svg>
-          <svg viewBox="0 0 64 64" class="absolute top-20 right-24 w-9 h-9 opacity-75 -rotate-12"><use href="#monarch-butterfly" /></svg>
-          <svg viewBox="0 0 64 64" class="absolute top-32 right-52 w-14 h-14 opacity-65 rotate-6"><use href="#monarch-butterfly" /></svg>
-        </div>
-
-        <div class="text-center mb-12">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
-          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+        <div class="relative overflow-hidden text-center mb-12 py-6">
+          <video id="story-butterflies-video" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply pointer-events-none" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+            <source src="monarch-background.mp4" type="video/mp4" />
+          </video>
+          <div class="relative z-10">
+            <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
+            <div class="w-full max-w-xl h-0.5 bg-palette-gold mx-auto mt-4"></div>
+          </div>
         </div>
 
         <div class="relative overflow-hidden bg-palette-goldHover text-white p-8 sm:p-12 rounded-sm border border-palette-gold/60 shadow-sm text-sm sm:text-base leading-relaxed">
-          <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-35 mix-blend-multiply pointer-events-none" />
+          <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center opacity-50 mix-blend-multiply pointer-events-none" />
           <div class="relative z-10 space-y-6">
             <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-cream first-letter:mr-2 first-letter:float-left" data-i18n="story-p1">
               The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
             </p>
             <p data-i18n="story-p2">
-              Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
+              “Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.
             </p>
             <p data-i18n="story-p3">
-              Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.
+              Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.”
             </p>
             <div class="pt-6 border-t border-palette-cream/30 text-center space-y-1">
               <p class="font-cinzel text-base sm:text-lg font-bold tracking-wider text-white">YOVANA LOPEZ MEDINA &amp; JUSTINA E. GONZALEZ</p>
@@ -369,7 +357,7 @@
           <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto" data-i18n="attorneys-intro">
             Dedicated, compassionate advocates fighting for your future, rights, and family reunification.
           </p>
-          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+          <div class="w-full max-w-xl h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -425,45 +413,45 @@
           <p class="text-sm text-palette-charcoalLight mt-3 max-w-xl mx-auto" data-i18n="services-intro">
             Focused representation designed to safeguard your legal status, reunite your loved ones, and defend your rights in court.
           </p>
-          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+          <div class="w-full max-w-xl h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">01</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-family-title">Family-Based Immigration</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-family-text">
+              <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">01</div>
+              <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-family-title">Family-Based Immigration</h3>
+              <p class="text-sm text-white leading-relaxed" data-i18n="service-family-text">
                 Green cards, citizenship, and family reunification.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-family-cta">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-family-cta">
               Inquire about Family-Based Immigration &nbsp;&rarr;
             </button>
           </div>
 
-          <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">02</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-humanitarian-title">Humanitarian Immigration</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-humanitarian-text">
+              <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">02</div>
+              <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-humanitarian-title">Humanitarian Immigration</h3>
+              <p class="text-sm text-white leading-relaxed" data-i18n="service-humanitarian-text">
                 Asylum, U visas, VAWA, and T visas.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-humanitarian-cta">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-humanitarian-cta">
               Inquire about Humanitarian Visas &nbsp;&rarr;
             </button>
           </div>
 
-          <div class="p-8 bg-white/90 hover:bg-white rounded-sm border border-palette-gold/40 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
+          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="text-xs font-mono text-palette-gold font-bold tracking-wider mb-2">03</div>
-              <h3 class="font-cinzel text-xl font-bold text-palette-black mb-3" data-i18n="service-removal-title">Removal Defense</h3>
-              <p class="text-sm text-palette-charcoalDark leading-relaxed" data-i18n="service-removal-text">
+              <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">03</div>
+              <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-removal-title">Removal Defense</h3>
+              <p class="text-sm text-white leading-relaxed" data-i18n="service-removal-text">
                 Representation for individuals facing deportation or removal proceedings.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-gold/20 text-[11px] font-cinzel font-bold text-palette-gold hover:text-palette-black text-left uppercase tracking-wide" data-i18n="service-removal-cta">
+            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-removal-cta">
               Inquire about Removal Defense &nbsp;&rarr;
             </button>
           </div>
@@ -478,9 +466,9 @@
           <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="appointment-badge">Contact Our Firm</span>
           <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="appointment-title">Request An Appointment</h2>
           <p class="text-sm text-palette-charcoalLight mt-2" data-i18n="appointment-intro">
-            Send us a message to schedule your initial consultation with our attorneys.
+            Send us a message via this form to schedule your initial consultation with our attorneys.
           </p>
-          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+          <div class="w-full max-w-xl h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <form action="https://formsubmit.co/contact@yourdreamourmission.com" method="POST" class="space-y-6 bg-white p-8 sm:p-12 border border-palette-gold/40 rounded-sm shadow-md">
@@ -604,6 +592,15 @@
           activeBtn.className = 'nav-btn px-3 py-2 rounded-sm border border-palette-gold bg-palette-gold text-white tracking-widest uppercase transition shadow-sm';
         }
       }
+
+      const storyVideo = document.getElementById('story-butterflies-video');
+      if (storyVideo) {
+        if (pageId === 'story' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          storyVideo.play().catch(() => {});
+        } else {
+          storyVideo.pause();
+        }
+      }
     }
 
     let currentLang = 'en';
@@ -650,8 +647,8 @@
         'story-badge': 'About Our Firm',
         'story-title': 'Our Story',
         'story-p1': 'The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.',
-        'story-p2': 'Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.',
-        'story-p3': 'Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.',
+        'story-p2': '“Together, we approach every case with empathy, dignity, and personal attention, advocating tirelessly for our clients and the dreams they are working to build. Through transparent fees, clear communication, personalized representation, and professional systems, we strive to make the legal process more understandable and accessible while providing strong, effective advocacy.',
+        'story-p3': 'Our goal is to be more than a law firm, to be a trusted community resource and dedicated advocate for immigrants, helping individuals and families protect their rights, remain together, and build a secure future in the United States.”',
         'attorneys-badge': 'Advocates For Justice',
         'attorneys-title': 'Our Attorneys',
         'attorneys-intro': 'Dedicated, compassionate advocates fighting for your future, rights, and family reunification.',
@@ -676,7 +673,7 @@
         'service-removal-cta': 'Inquire about Removal Defense\u00A0→',
         'appointment-badge': 'Contact Our Firm',
         'appointment-title': 'Request An Appointment',
-        'appointment-intro': 'Send us a message to schedule your initial consultation with our attorneys.',
+        'appointment-intro': 'Send us a message via this form to schedule your initial consultation with our attorneys.',
         'form-name': 'Full Name',
         'form-name-ph': 'Jane Doe',
         'form-email': 'Email Address',
@@ -733,8 +730,8 @@
         'story-badge': 'Sobre Nuestra Firma',
         'story-title': 'Nuestra Historia',
         'story-p1': 'La firma fue cofundada por Yovana Lopez Medina y Justina E. Gonzalez, y está arraigada en la experiencia personal y en una comprensión profunda del camino migratorio. La propia experiencia inmigrante de Yovana moldeó su comprensión del miedo, la incertidumbre y el valor que implica el proceso, mientras que la experiencia directa de Justina al presenciar los desafíos que enfrentó su familia le brinda una comprensión personal del estrés y del impacto de los asuntos migratorios.',
-        'story-p2': 'Juntas abordamos cada caso con empatía, dignidad y atención personal, defendiendo incansablemente a nuestros clientes y los sueños que están construyendo. Mediante honorarios transparentes, comunicación clara, representación personalizada y sistemas profesionales, buscamos hacer el proceso legal más comprensible y accesible mientras ofrecemos una defensa sólida y eficaz.',
-        'story-p3': 'Nuestro objetivo es ser más que una firma legal, ser un recurso confiable para la comunidad y una defensora dedicada de las personas inmigrantes, ayudando a individuos y familias a proteger sus derechos, permanecer juntos y construir un futuro seguro en los Estados Unidos.',
+        'story-p2': '“Juntas abordamos cada caso con empatía, dignidad y atención personal, defendiendo incansablemente a nuestros clientes y los sueños que están construyendo. Mediante honorarios transparentes, comunicación clara, representación personalizada y sistemas profesionales, buscamos hacer el proceso legal más comprensible y accesible mientras ofrecemos una defensa sólida y eficaz.',
+        'story-p3': 'Nuestro objetivo es ser más que una firma legal, ser un recurso confiable para la comunidad y una defensora dedicada de las personas inmigrantes, ayudando a individuos y familias a proteger sus derechos, permanecer juntos y construir un futuro seguro en los Estados Unidos.”',
         'attorneys-badge': 'Defensoras de la Justicia',
         'attorneys-title': 'Nuestras Abogadas',
         'attorneys-intro': 'Defensoras dedicadas y compasivas que luchan por su futuro, sus derechos y la reunificación familiar.',
@@ -759,7 +756,7 @@
         'service-removal-cta': 'Consultar sobre Defensa contra la Deportación\u00A0→',
         'appointment-badge': 'Contacte a Nuestra Firma',
         'appointment-title': 'Solicitar Una Cita',
-        'appointment-intro': 'Envíenos un mensaje para programar su consulta inicial con nuestras abogadas.',
+        'appointment-intro': 'Envíenos un mensaje mediante este formulario para programar su consulta inicial con nuestras abogadas.',
         'form-name': 'Nombre Completo',
         'form-name-ph': 'Jane Doe',
         'form-email': 'Correo Electrónico',
