@@ -372,15 +372,57 @@
     <!-- ======================================================== -->
     <div id="page-story" class="page-view hidden">
       <section class="relative py-16 max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12 relative">
-          <div class="absolute -top-8 left-1/2 -translate-x-1/2 sm:-top-6 sm:left-auto sm:right-8 sm:translate-x-0 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none z-0">
-            <img 
+        <div class="text-center mb-12 relative pt-16 sm:pt-0">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 sm:top-4 sm:right-0 sm:left-auto sm:translate-x-0 pointer-events-none z-0" style="width: 90px; height: 65px;">
+            <svg 
               id="story-butterfly" 
-              src="Logo V9.1 - Color Icon Only.svg" 
-              alt="" 
+              class="butterfly-accent w-full h-full"
+              viewBox="0 0 120 90" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
-              class="butterfly-accent w-full h-full object-contain opacity-80"
-            />
+            >
+              <!-- Monarch Butterfly -->
+              <!-- Upper Left Wing -->
+              <path d="M60 45 Q45 20, 25 15 Q15 13, 10 20 Q8 28, 15 35 Q20 40, 30 42 Q40 43, 50 40 L60 45 Z" 
+                    fill="#D97020" stroke="#1a0a00" stroke-width="0.5"/>
+              <ellipse cx="25" cy="28" rx="6" ry="8" fill="#1a0a00" opacity="0.7"/>
+              <ellipse cx="35" cy="32" rx="4" ry="5" fill="#1a0a00" opacity="0.6"/>
+              <circle cx="20" cy="22" r="2.5" fill="#FFF7E9" opacity="0.8"/>
+              <circle cx="30" cy="26" r="2" fill="#FFF7E9" opacity="0.7"/>
+              
+              <!-- Lower Left Wing -->
+              <path d="M60 45 Q50 50, 40 58 Q30 65, 25 72 Q22 78, 25 82 Q30 85, 38 80 Q45 75, 52 68 Q57 60, 60 45 Z" 
+                    fill="#E8853F" stroke="#1a0a00" stroke-width="0.5"/>
+              <ellipse cx="35" cy="68" rx="5" ry="7" fill="#1a0a00" opacity="0.6"/>
+              <circle cx="32" cy="63" r="2" fill="#FFF7E9" opacity="0.7"/>
+              <circle cx="40" cy="72" r="2.5" fill="#FFF7E9" opacity="0.6"/>
+              
+              <!-- Upper Right Wing -->
+              <path d="M60 45 Q75 20, 95 15 Q105 13, 110 20 Q112 28, 105 35 Q100 40, 90 42 Q80 43, 70 40 L60 45 Z" 
+                    fill="#D97020" stroke="#1a0a00" stroke-width="0.5"/>
+              <ellipse cx="95" cy="28" rx="6" ry="8" fill="#1a0a00" opacity="0.7"/>
+              <ellipse cx="85" cy="32" rx="4" ry="5" fill="#1a0a00" opacity="0.6"/>
+              <circle cx="100" cy="22" r="2.5" fill="#FFF7E9" opacity="0.8"/>
+              <circle cx="90" cy="26" r="2" fill="#FFF7E9" opacity="0.7"/>
+              
+              <!-- Lower Right Wing -->
+              <path d="M60 45 Q70 50, 80 58 Q90 65, 95 72 Q98 78, 95 82 Q90 85, 82 80 Q75 75, 68 68 Q63 60, 60 45 Z" 
+                    fill="#E8853F" stroke="#1a0a00" stroke-width="0.5"/>
+              <ellipse cx="85" cy="68" rx="5" ry="7" fill="#1a0a00" opacity="0.6"/>
+              <circle cx="88" cy="63" r="2" fill="#FFF7E9" opacity="0.7"/>
+              <circle cx="80" cy="72" r="2.5" fill="#FFF7E9" opacity="0.6"/>
+              
+              <!-- Body -->
+              <ellipse cx="60" cy="45" rx="3" ry="18" fill="#1a0a00"/>
+              <ellipse cx="60" cy="35" rx="2.5" ry="6" fill="#1a0a00"/>
+              
+              <!-- Antennae -->
+              <path d="M60 32 Q58 25, 56 20" stroke="#1a0a00" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+              <path d="M60 32 Q62 25, 64 20" stroke="#1a0a00" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+              <circle cx="56" cy="20" r="1.2" fill="#1a0a00"/>
+              <circle cx="64" cy="20" r="1.2" fill="#1a0a00"/>
+            </svg>
           </div>
           <div class="relative z-10">
             <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
