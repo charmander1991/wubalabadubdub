@@ -28,6 +28,64 @@
       -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 100%);
       mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 100%);
     }
+    
+    /* Butterfly Flutter Animation */
+    @keyframes butterfly-flutter {
+      0%, 100% { transform: scaleX(1) translateY(0px); }
+      25% { transform: scaleX(0.95) translateY(-2px); }
+      50% { transform: scaleX(0.92) translateY(0px); }
+      75% { transform: scaleX(0.95) translateY(2px); }
+    }
+    
+    @keyframes butterfly-float {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      33% { transform: translateY(-8px) translateX(3px); }
+      66% { transform: translateY(4px) translateX(-2px); }
+    }
+    
+    @keyframes butterfly-flutter-in {
+      0% { 
+        opacity: 0; 
+        transform: translateY(-30px) translateX(-20px) scale(0.5) rotate(-10deg);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(5px) translateX(2px) scale(1.05) rotate(2deg);
+      }
+      100% { 
+        opacity: 1; 
+        transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+      }
+    }
+    
+    .butterfly-accent {
+      animation: butterfly-flutter 3s ease-in-out infinite;
+      transform-origin: center center;
+      filter: drop-shadow(0 2px 8px rgba(167, 135, 79, 0.3));
+    }
+    
+    .butterfly-accent.floating {
+      animation: butterfly-flutter 3s ease-in-out infinite, butterfly-float 8s ease-in-out infinite;
+    }
+    
+    .butterfly-accent.flutter-in {
+      animation: butterfly-flutter-in 1.2s ease-out forwards, butterfly-flutter 3s ease-in-out 1.2s infinite;
+    }
+    
+    .butterfly-accent.floating.flutter-in {
+      animation: butterfly-flutter-in 1.2s ease-out forwards, butterfly-flutter 3s ease-in-out 1.2s infinite, butterfly-float 8s ease-in-out 1.2s infinite;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      .butterfly-accent,
+      .butterfly-accent.floating,
+      .butterfly-accent.flutter-in,
+      .butterfly-accent.floating.flutter-in {
+        animation: none !important;
+        transform: none !important;
+        filter: drop-shadow(0 2px 8px rgba(167, 135, 79, 0.2));
+      }
+    }
   </style>
 
   <script>
@@ -314,10 +372,21 @@
     <!-- ======================================================== -->
     <div id="page-story" class="page-view hidden">
       <section class="relative py-16 max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
-          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
-          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+        <div class="text-center mb-12 relative">
+          <div class="absolute -top-8 left-1/2 -translate-x-1/2 sm:-top-6 sm:left-auto sm:right-8 sm:translate-x-0 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none z-0">
+            <img 
+              id="story-butterfly" 
+              src="Logo V9.1 - Color Icon Only.svg" 
+              alt="" 
+              aria-hidden="true"
+              class="butterfly-accent w-full h-full object-contain opacity-80"
+            />
+          </div>
+          <div class="relative z-10">
+            <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
+            <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
+          </div>
         </div>
 
         <div class="relative overflow-hidden bg-palette-goldHover text-white p-8 sm:p-12 rounded-sm border border-palette-gold/60 shadow-sm text-sm sm:text-base leading-relaxed">
@@ -1008,6 +1077,22 @@
       });
 
       updateVideoControl();
+    }
+
+    // Butterfly flutter-in animation on scroll
+    const butterflyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const butterfly = document.getElementById('story-butterfly');
+        if (butterfly && entry.isIntersecting && !butterfly.classList.contains('flutter-in')) {
+          butterfly.classList.add('flutter-in', 'floating');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    // Observe the Our Story section
+    const storySection = document.getElementById('page-story');
+    if (storySection) {
+      butterflyObserver.observe(storySection);
     }
   </script>
 </body>
