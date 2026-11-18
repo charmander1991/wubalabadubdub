@@ -314,19 +314,14 @@
     <!-- ======================================================== -->
     <div id="page-story" class="page-view hidden">
       <section class="relative py-16 max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="relative overflow-hidden text-center mb-12 py-6">
-          <video id="story-butterflies-video" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply pointer-events-none" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
-            <source src="monarch-background.mp4" type="video/mp4" />
-          </video>
-          <div class="relative z-10">
-            <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
-            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
-            <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
-          </div>
+        <div class="text-center mb-12">
+          <span class="text-xs uppercase tracking-widest font-bold text-palette-gold block font-cinzel" data-i18n="story-badge">About Our Firm</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-palette-black mt-2" data-i18n="story-title">Our Story</h2>
+          <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
         <div class="relative overflow-hidden bg-palette-goldHover text-white p-8 sm:p-12 rounded-sm border border-palette-gold/60 shadow-sm text-sm sm:text-base leading-relaxed">
-          <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-[center_25%] opacity-50 mix-blend-multiply pointer-events-none" />
+          <img src="Partners- Fun.jpeg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-50 mix-blend-multiply pointer-events-none" />
           <div class="relative z-10 space-y-6">
             <p class="first-letter:text-4xl first-letter:font-cinzel first-letter:font-bold first-letter:text-palette-cream first-letter:mr-2 first-letter:float-left" data-i18n="story-p1">
               The law firm is co-founded by Yovana Lopez Medina and Justina E. Gonzalez, our firm is rooted in personal experience and a deep understanding of the immigration journey. Yovana’s own immigrant experience shaped her understanding of the fear, uncertainty, and courage involved in the process, while Justina’s firsthand experience witnessing the challenges her family faced gives her a personal understanding of the stress and impact of immigration matters.
@@ -532,10 +527,6 @@
         </div>
 
         <div class="bg-white/95 p-8 sm:p-12 border border-palette-gold/40 rounded-sm shadow-sm space-y-6 text-sm leading-relaxed">
-          <p class="text-palette-charcoalDark italic text-xs" data-i18n="privacy-review-notice">
-            <strong>Note:</strong> This privacy policy is provided for informational purposes and should be reviewed by an attorney before publication.
-          </p>
-
           <div>
             <h3 class="font-cinzel text-lg font-bold text-palette-black mb-3" data-i18n="privacy-h1">Information Collection and Use</h3>
             <p class="text-palette-charcoalDark" data-i18n="privacy-p1">
@@ -597,10 +588,6 @@
         </div>
 
         <div class="bg-white/95 p-8 sm:p-12 border border-palette-gold/40 rounded-sm shadow-sm space-y-6 text-sm leading-relaxed">
-          <p class="text-palette-charcoalDark italic text-xs" data-i18n="accessibility-review-notice">
-            <strong>Note:</strong> This accessibility statement is provided for informational purposes and should be reviewed by an attorney before publication.
-          </p>
-
           <div>
             <h3 class="font-cinzel text-lg font-bold text-palette-black mb-3" data-i18n="accessibility-h1">Our Commitment to Accessibility</h3>
             <p class="text-palette-charcoalDark" data-i18n="accessibility-p1">
@@ -735,14 +722,6 @@
         }
       }
 
-      const storyVideo = document.getElementById('story-butterflies-video');
-      if (storyVideo) {
-        if (pageId === 'story' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          storyVideo.play().catch(() => {});
-        } else {
-          storyVideo.pause();
-        }
-      }
     }
 
     let currentLang = 'en';
@@ -835,7 +814,6 @@
         'legal-disclaimer': 'Immigration options depend on the specific facts and circumstances of each case. Immigration laws, regulations, and government policies are subject to change. Information provided on this website is for general informational purposes only and does not constitute legal advice or create an attorney-client relationship.',
         'privacy-badge': 'Legal Information',
         'privacy-title': 'Privacy Policy',
-        'privacy-review-notice': 'Note: This privacy policy is provided for informational purposes and should be reviewed by an attorney before publication.',
         'privacy-h1': 'Information Collection and Use',
         'privacy-p1': 'Your Dream Our Mission, PLLC ("we," "our," or "the Firm") respects your privacy and is committed to protecting the personal information you share with us. When you contact us through our website, including through the appointment request form, we collect information such as your name, email address, phone number, and the details you provide about your immigration matter or consultation request.',
         'privacy-h2': 'How We Use Your Information',
@@ -849,7 +827,6 @@
         'privacy-update': 'This Privacy Policy may be updated periodically. Continued use of our website constitutes acceptance of any changes.',
         'accessibility-badge': 'Our Commitment',
         'accessibility-title': 'Accessibility Statement',
-        'accessibility-review-notice': 'Note: This accessibility statement is provided for informational purposes and should be reviewed by an attorney before publication.',
         'accessibility-h1': 'Our Commitment to Accessibility',
         'accessibility-p1': 'Your Dream Our Mission, PLLC is committed to ensuring that our website and services are accessible to all individuals, including those with disabilities. We believe that everyone deserves equal access to legal information and representation, and we strive to provide a welcoming and inclusive experience for all visitors to our website.',
         'accessibility-h2': 'Accessibility Features',
@@ -949,7 +926,6 @@
         'legal-disclaimer': 'Las opciones migratorias dependen de los hechos y circunstancias específicas de cada caso. Las leyes, regulaciones y políticas gubernamentales de inmigración están sujetas a cambios. La información proporcionada en este sitio web tiene fines informativos generales y no constituye asesoría legal ni crea una relación abogado-cliente.',
         'privacy-badge': 'Información Legal',
         'privacy-title': 'Política de Privacidad',
-        'privacy-review-notice': 'Nota: Esta política de privacidad se proporciona con fines informativos y debe ser revisada por un abogado antes de su publicación.',
         'privacy-h1': 'Recopilación y Uso de Información',
         'privacy-p1': 'Your Dream Our Mission, PLLC ("nosotros", "nuestro" o "la Firma") respeta su privacidad y se compromete a proteger la información personal que comparte con nosotros. Cuando nos contacta a través de nuestro sitio web, incluso mediante el formulario de solicitud de cita, recopilamos información como su nombre, dirección de correo electrónico, número de teléfono y los detalles que proporciona sobre su asunto migratorio o solicitud de consulta.',
         'privacy-h2': 'Cómo Usamos Su Información',
@@ -963,7 +939,6 @@
         'privacy-update': 'Esta Política de Privacidad puede actualizarse periódicamente. El uso continuado de nuestro sitio web constituye la aceptación de cualquier cambio.',
         'accessibility-badge': 'Nuestro Compromiso',
         'accessibility-title': 'Declaración de Accesibilidad',
-        'accessibility-review-notice': 'Nota: Esta declaración de accesibilidad se proporciona con fines informativos y debe ser revisada por un abogado antes de su publicación.',
         'accessibility-h1': 'Nuestro Compromiso con la Accesibilidad',
         'accessibility-p1': 'Your Dream Our Mission, PLLC se compromete a garantizar que nuestro sitio web y servicios sean accesibles para todas las personas, incluidas aquellas con discapacidades. Creemos que todos merecen igual acceso a la información legal y representación, y nos esforzamos por brindar una experiencia acogedora e inclusiva para todos los visitantes de nuestro sitio web.',
         'accessibility-h2': 'Características de Accesibilidad',
