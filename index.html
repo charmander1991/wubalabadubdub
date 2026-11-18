@@ -29,6 +29,47 @@
       mask-image: linear-gradient(to right, transparent 0%, #000 18%, #000 100%);
     }
     
+    /* Service Cards Slide-in Animation */
+    @keyframes slideInFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .service-card {
+      opacity: 0;
+    }
+    
+    .service-card.animate-in {
+      animation: slideInFromRight 500ms ease-out forwards;
+    }
+    
+    .service-card.animate-in:nth-child(1) {
+      animation-delay: 0ms;
+    }
+    
+    .service-card.animate-in:nth-child(2) {
+      animation-delay: 150ms;
+    }
+    
+    .service-card.animate-in:nth-child(3) {
+      animation-delay: 300ms;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      .service-card {
+        opacity: 1;
+        transform: none;
+      }
+      .service-card.animate-in {
+        animation: none;
+      }
+    }
   </style>
 
   <script>
@@ -427,44 +468,50 @@
           <div class="w-16 h-0.5 bg-palette-gold mx-auto mt-4"></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-            <div>
+        <div class="grid md:grid-cols-3 gap-8 overflow-x-hidden">
+          <div class="service-card p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 shadow-sm flex flex-col h-full">
+            <div class="flex-grow">
               <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">01</div>
               <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-family-title">Family-Based Immigration</h3>
               <p class="text-sm text-white leading-relaxed" data-i18n="service-family-text">
                 Green cards, citizenship, and family reunification.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-family-cta">
-              Inquire about Family-Based Immigration &nbsp;&rarr;
-            </button>
+            <div class="mt-auto pt-4">
+              <button type="button" onclick="switchPage('appointment')" class="border-t border-palette-cream/30 w-full text-left pt-4 text-[11px] font-cinzel font-bold text-white hover:underline uppercase tracking-wide" data-i18n="service-family-cta">
+                Inquire about Family-Based Immigration &nbsp;&rarr;
+              </button>
+            </div>
           </div>
 
-          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-            <div>
+          <div class="service-card p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 shadow-sm flex flex-col h-full">
+            <div class="flex-grow">
               <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">02</div>
               <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-humanitarian-title">Humanitarian Immigration</h3>
               <p class="text-sm text-white leading-relaxed" data-i18n="service-humanitarian-text">
                 Asylum, U visas, VAWA, and T visas.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-humanitarian-cta">
-              Inquire about Humanitarian Visas &nbsp;&rarr;
-            </button>
+            <div class="mt-auto pt-4">
+              <button type="button" onclick="switchPage('appointment')" class="border-t border-palette-cream/30 w-full text-left pt-4 text-[11px] font-cinzel font-bold text-white hover:underline uppercase tracking-wide" data-i18n="service-humanitarian-cta">
+                Inquire about Humanitarian Visas &nbsp;&rarr;
+              </button>
+            </div>
           </div>
 
-          <div class="p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 space-y-4 shadow-sm flex flex-col justify-between">
-            <div>
+          <div class="service-card p-8 bg-palette-goldHover text-white rounded-sm border border-palette-gold/60 transition duration-300 shadow-sm flex flex-col h-full">
+            <div class="flex-grow">
               <div class="text-xs font-mono text-white font-bold tracking-wider mb-2">03</div>
               <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="service-removal-title">Removal Defense</h3>
               <p class="text-sm text-white leading-relaxed" data-i18n="service-removal-text">
                 Representation for individuals facing deportation or removal proceedings.
               </p>
             </div>
-            <button type="button" onclick="switchPage('appointment')" class="pt-4 border-t border-palette-cream/30 text-[11px] font-cinzel font-bold text-white hover:underline text-left uppercase tracking-wide" data-i18n="service-removal-cta">
-              Inquire about Removal Defense &nbsp;&rarr;
-            </button>
+            <div class="mt-auto pt-4">
+              <button type="button" onclick="switchPage('appointment')" class="border-t border-palette-cream/30 w-full text-left pt-4 text-[11px] font-cinzel font-bold text-white hover:underline uppercase tracking-wide" data-i18n="service-removal-cta">
+                Inquire about Removal Defense &nbsp;&rarr;
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -738,6 +785,18 @@
         }
       }
 
+      // Trigger service cards animation
+      if (pageId === 'services') {
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+          card.classList.remove('animate-in');
+        });
+        // Trigger reflow to restart animation
+        void document.querySelector('.service-card')?.offsetWidth;
+        serviceCards.forEach(card => {
+          card.classList.add('animate-in');
+        });
+      }
     }
 
     let currentLang = 'en';
